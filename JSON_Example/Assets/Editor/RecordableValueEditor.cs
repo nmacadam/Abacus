@@ -4,8 +4,7 @@ using UnityEditor;
 using UnityEngine;
 
 // todo: =============================================================
-// + pretty iffy using the selection instead of serialized properties!\
-// + current editor prefs usage means i only get to have one recordable; they need uids or something
+// + cache some of the stuff like component names
 
 public abstract class RecordableValueEditor<T> : Editor
 {
@@ -15,37 +14,43 @@ public abstract class RecordableValueEditor<T> : Editor
     private int _selectedComponent;
     private int _selectedProperty;
 
+    private string _selectedComponentKey;
+    private string _selectedPropertyKey;
+
+    private GameObject _gameObject;
+
     private void OnEnable()
     {
         recordFrom = serializedObject.FindProperty("recordFrom");
         propertyName = serializedObject.FindProperty("propertyNamePlaceholder");
 
-        _selectedComponent = EditorPrefs.GetInt("abacus_component", 0);
-        _selectedProperty = EditorPrefs.GetInt("abacus_property", 0);
+        _gameObject = (serializedObject.targetObject as Component).gameObject;
+        var instanceID = serializedObject.targetObject.GetHashCode();
+
+        _selectedComponentKey = $"abacus_component_id:{instanceID}";
+        _selectedPropertyKey = $"abacus_property_id:{instanceID}";
+
+        _selectedComponent = EditorPrefs.GetInt(_selectedComponentKey, 0);
+        _selectedProperty = EditorPrefs.GetInt(_selectedPropertyKey, 0);
     }
 
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
 
-        
+        // Get all components on this edtior's component's gameObject 
+        var components = _gameObject.GetComponents<Component>();
 
-        var components = Selection.activeGameObject.GetComponents<Component>();
-
+        // Get the names of all components so we can display them in a popup
         List<string> componentnames = new List<string>();
         for (int i = 0; i < components.Length; i++)
         {
             componentnames.Add(components[i].GetType().ToString());
         }
 
-        //string[] options = new string[]
-        //{
-        //    "Option1", "Option2", "Option3",
-        //};
-
         _selectedComponent = EditorGUILayout.Popup("Component", _selectedComponent, componentnames.ToArray());
 
-        var recordable = Selection.activeGameObject.GetComponent<RecordableValue<T>>();
+        var recordable = _gameObject.GetComponent<RecordableValue<T>>();
         recordable.recordFrom = components[_selectedComponent];
         //recordFrom = components[_selectedComponent];
 
@@ -75,8 +80,8 @@ public abstract class RecordableValueEditor<T> : Editor
         //EditorGUILayout.PropertyField(val);
         GUI.enabled = true;
 
-        EditorPrefs.SetInt("abacus_component", _selectedComponent);
-        EditorPrefs.SetInt("abacus_property", _selectedProperty);
+        EditorPrefs.SetInt(_selectedComponentKey, _selectedComponent);
+        EditorPrefs.SetInt(_selectedPropertyKey, _selectedProperty);
 
         serializedObject.ApplyModifiedProperties();
     }

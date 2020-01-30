@@ -4,23 +4,34 @@ using System.Linq.Expressions;
 using System.Reflection;
 using UnityEngine;
 
+public struct DataPoint<T>
+{
+    public T Value;
+    public float Time;
+
+    public DataPoint(T value, float time)
+    {
+        Value = value;
+        Time = time;
+    }
+}
+
 public interface IRecordable<T>
 {
     T GetValue();
     Type GetValueType();
     void Dump();
 
-    List<T> History { get; }
+    List<DataPoint<T>> History { get; }
 }
 
 public abstract class RecordableValue<T> : MonoBehaviour, IRecordable<T>
 {
-    public List<T> History { get; } = new List<T>();
+    public List<DataPoint<T>> History { get; } = new List<DataPoint<T>>();
 
     public Component recordFrom;
     public Type componentType;
     public string propertyNamePlaceholder;
-    //public Type propertyType;
 
     private Delegate _read;
 
@@ -52,7 +63,7 @@ public abstract class RecordableValue<T> : MonoBehaviour, IRecordable<T>
         string output = "";
         foreach (var value in History)
         {
-            output += value + " ";
+            output += $"[value;{value.Value}; time:{value.Time}]  ";
         }
         Debug.Log(output);
     }
@@ -74,7 +85,7 @@ public abstract class RecordableValue<T> : MonoBehaviour, IRecordable<T>
         _read = CreateDelegate(componentType, propertyInfo.GetGetMethod());
 
         _previousValue = GetValue();
-        History.Add(_previousValue);
+        History.Add(new DataPoint<T>(_previousValue, Time.time));
     }
 
     private void Update()
@@ -82,7 +93,7 @@ public abstract class RecordableValue<T> : MonoBehaviour, IRecordable<T>
         var currentValue = GetValue();
         if (!AreEqual(_previousValue, currentValue))
         {
-            History.Add(currentValue);
+            History.Add(new DataPoint<T>(currentValue, Time.time));
             _previousValue = currentValue;
         }
     }
