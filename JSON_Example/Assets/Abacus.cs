@@ -77,17 +77,17 @@ public class Abacus : MonoBehaviour
 
     public void Dump()
     {
-        foreach (var record in _recordings)
-        {
-            record.Dump();
-        }
+        //foreach (var record in _recordings)
+        //{
+        //    record.Dump();
+        //}
     }
 
-    public void AddRecord(RecordableValue value)
-    {
-        _recordings.Add(value);
-    }
+    //public void AddRecord(RecordableValue value)
+    //{
+    //    _recordings.Add(value);
+    //}
 
     //private List<RecordableValue> _recordings = new List<RecordableValue>();
-    private List<RecordableValue> _recordings = new List<RecordableValue>();
+    //private List<RecordableValue> _recordings = new List<RecordableValue>();
 }

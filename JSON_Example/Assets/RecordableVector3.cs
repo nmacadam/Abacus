@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Reflection;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class RecordableVector3 : RecordableValue<int>
+public class RecordableVector3 : RecordableValue<Vector3>
+{ }
+
+/*
+public class RecordableVector3 : RecordableValue<Vector3>
 {
     public Component recordFrom;
     public Type componentType;
@@ -84,7 +82,7 @@ public class RecordableVector3 : RecordableValue<int>
     //    var body = Expression.Constant(info.Invoke(recordFrom, null));
     //    var parameter = Expression.Parameter(componentType);
     //    var delegateType = typeof(Func<,>).MakeGenericType(componentType, propType);
-    //    /*dynamic*/
+    //    
     //    var lambda = Expression.Lambda(delegateType, body, parameter);
 
     //    return (Func<object, Vector3>)lambda.Compile();
@@ -110,4 +108,4 @@ public class RecordableVector3 : RecordableValue<int>
         val = v3;
         //Debug.Log((Vector3)value);
     }
-}
+}*/
