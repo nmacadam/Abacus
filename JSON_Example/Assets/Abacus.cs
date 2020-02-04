@@ -15,12 +15,12 @@ public class Abacus : MonoBehaviour
         }
         set
         {
-            __shuttingDown = value;
-
-            if (value)
+            if (value && !__shuttingDown)
             {
                 _instance.Dump();
             }
+
+            __shuttingDown = value;
         }
     }
     private static object _lock = new object();
@@ -65,7 +65,7 @@ public class Abacus : MonoBehaviour
             }
         }
     }
-    
+
     private void OnApplicationQuit()
     {
         _shuttingDown = true;
@@ -77,17 +77,21 @@ public class Abacus : MonoBehaviour
 
     public void Dump()
     {
-        //foreach (var record in _recordings)
-        //{
-        //    record.Dump();
-        //}
+        foreach (var record in recordables)
+        {
+            var dump = record.Dump();
+            foreach (var item in dump)
+            {
+                Debug.Log(item);
+            }
+        }
     }
 
-    //public void AddRecord(RecordableValue value)
-    //{
-    //    _recordings.Add(value);
-    //}
+    public void AddRecord(IRecordable value)
+    {
+        Debug.Log("Adding to recordables");
+        recordables.Add(value);
+    }
 
-    //private List<RecordableValue> _recordings = new List<RecordableValue>();
-    //private List<RecordableValue> _recordings = new List<RecordableValue>();
+    private List<IRecordable> recordables = new List<IRecordable>();
 }

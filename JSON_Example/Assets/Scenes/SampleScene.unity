@@ -407,6 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b15d98734665443a9f13e9fed49964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PublicNonProperty: {x: 0, y: 0, z: 0}
   _inner: {x: 0, y: 0, z: 0}
 --- !u!114 &1522349790
 MonoBehaviour:
@@ -420,8 +421,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc7176640ec4db48b108ec2079e1606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recordFrom: {fileID: 1522349788}
-  propertyNamePlaceholder: position
+  _timeStep: 1
+  recordFrom: {fileID: 1522349789}
+  recordName: TestValue
 --- !u!1 &1691594955
 GameObject:
   m_ObjectHideFlags: 0
