@@ -421,9 +421,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc7176640ec4db48b108ec2079e1606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _recordOnStart: 1
   _timeStep: 1
-  recordFrom: {fileID: 1522349789}
-  recordName: TestValue
+  recordFrom: {fileID: 1522349788}
+  recordName: position
 --- !u!1 &1691594955
 GameObject:
   m_ObjectHideFlags: 0

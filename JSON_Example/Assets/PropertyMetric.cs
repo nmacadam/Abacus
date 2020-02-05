@@ -22,8 +22,11 @@ public interface IRecordable
     string[] Dump();
     void Record();
     void SetSource(Component component);
+    void Enable();
+    void Disable();
 
     float TimeStep { get; }
+    bool IsEnabled { get; }
 }
 
 public interface IMetric<T> : IRecordable
@@ -35,10 +38,14 @@ public interface IMetric<T> : IRecordable
 
 public abstract class PropertyMetric<T> : MonoBehaviour, IMetric<T>
 {
+    [SerializeField] private bool _recordOnStart = true;
     [SerializeField] private float _timeStep = 1f;
     public float TimeStep => _timeStep;
 
     public List<DataPoint<T>> History { get; } = new List<DataPoint<T>>();
+
+    private bool _isEnabled = false;
+    public bool IsEnabled => _isEnabled;
 
     [SerializeField] private Component recordFrom;
     private Type componentType;
@@ -119,17 +126,25 @@ public abstract class PropertyMetric<T> : MonoBehaviour, IMetric<T>
         //    //_read = CreateDelegate(componentType, fieldInfo.GetValue(recordFrom))
         //}
 
-        _previousValue = GetValue();
-        startTime = Time.time;
-        History.Add(new DataPoint<T>(_previousValue, startTime));
+        if (_recordOnStart) Enable();
+
+        if (IsEnabled)
+        {
+            _previousValue = GetValue();
+            startTime = Time.time;
+            History.Add(new DataPoint<T>(_previousValue, startTime));
+        }
     }
 
     private void Update()
     {
-        if (Time.time - startTime >= TimeStep)
+        if (IsEnabled)
         {
-            Record();
-            startTime = Time.time;
+            if (Time.time - startTime >= TimeStep)
+            {
+                Record();
+                startTime = Time.time;
+            }
         }
     }
 
@@ -153,5 +168,15 @@ public abstract class PropertyMetric<T> : MonoBehaviour, IMetric<T>
     public T GetLastRecordedValue()
     {
         return _lastRecordedValue;
+    }
+
+    public void Enable()
+    {
+        _isEnabled = true;
+    }
+
+    public void Disable()
+    {
+        _isEnabled = false;
     }
 }

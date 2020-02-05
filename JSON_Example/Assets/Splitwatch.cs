@@ -43,7 +43,7 @@ public class Split : TimeDuration
 /// Measures splits (discrete, sequential durations).
 /// Use when you want to measure the time each event in a sequence takes to complete
 /// </summary>
-public class SplitStopwatch : MonoBehaviour
+public class Splitwatch : MonoBehaviour
 {
     private List<Split> _splits = new List<Split>();
 

@@ -10,6 +10,7 @@ public abstract class PropertyMetricEditor<T> : Editor
 
     private SerializedProperty recordFrom;
     private SerializedProperty recordName;
+    private SerializedProperty recordOnStart;
     
     private int _selectedComponent;
     private int _selectedRecord;
@@ -26,6 +27,7 @@ public abstract class PropertyMetricEditor<T> : Editor
         // Get properties from serializedObject
         recordFrom = serializedObject.FindProperty("recordFrom");
         recordName = serializedObject.FindProperty("recordName");
+        recordOnStart = serializedObject.FindProperty("_recordOnStart");
 
         timeStep = serializedObject.FindProperty("_timeStep");
 
@@ -77,6 +79,8 @@ public abstract class PropertyMetricEditor<T> : Editor
         var property = propertyInfo[_selectedRecord];
 
         recordName.stringValue = property.Name;
+
+        recordOnStart.boolValue = EditorGUILayout.Toggle("Record On Start", recordOnStart.boolValue);
 
         _optionsFoldoutOpen = EditorGUILayout.Foldout(_optionsFoldoutOpen, "Options & Debug");
         if (_optionsFoldoutOpen)
