@@ -11,6 +11,9 @@ Abacus provides several means to record temporal data about gameplay.
 - Stopwatch (single event, multiple durations for comparison)
 - Splitwatch (seperate, sequential events for an event timeline)
 
+## ⚠ Current Issues
+- Not sure if editor/inspector settings will persist between Unity sessions
+
 ## Upcoming Features
 - Data output to JSON
 - Preemptive value dumping (for minimizing necessary memory)
