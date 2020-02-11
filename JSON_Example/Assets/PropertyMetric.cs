@@ -4,6 +4,10 @@ using System.Linq.Expressions;
 using System.Reflection;
 using UnityEngine;
 
+/// <summary>
+/// Defines a generic data recording by pairing a data type with a timestamp
+/// </summary>
+/// <typeparam name="T">The data type to record</typeparam>
 public struct DataPoint<T>
 {
     public T Value;
@@ -16,6 +20,9 @@ public struct DataPoint<T>
     }
 }
 
+/// <summary>
+/// Implements methods for recordability, but without any hard data type
+/// </summary>
 public interface IRecordable
 {
     Type GetValueType();
@@ -29,6 +36,10 @@ public interface IRecordable
     bool IsEnabled { get; }
 }
 
+/// <summary>
+/// Implements further methods for recording data, with a specified data type
+/// </summary>
+/// <typeparam name="T">The type of data that the metric is</typeparam>
 public interface IMetric<T> : IRecordable
 {
     T GetValue();
@@ -36,6 +47,10 @@ public interface IMetric<T> : IRecordable
     List<DataPoint<T>> History { get; }
 }
 
+/// <summary>
+/// Abstract base class for all Metric types; Create a new Metric class by inheriting from this
+/// </summary>
+/// <typeparam name="T">The data type for the metric to hold</typeparam>
 public abstract class PropertyMetric<T> : MonoBehaviour, IMetric<T>
 {
     [SerializeField] private bool _recordOnStart = true;
@@ -71,16 +86,29 @@ public abstract class PropertyMetric<T> : MonoBehaviour, IMetric<T>
         return a.Equals(b);
     }
 
+    /// <summary>
+    /// Retrieve the current value from the property
+    /// </summary>
+    /// <remarks>Uses reflection!  Call only as necessary!</remarks>
+    /// <returns>The current value from the property</returns>
     public T GetValue()
     {
         return (T)_read.DynamicInvoke(recordFrom);
     }
 
+    /// <summary>
+    /// The type that this PropertyMetric records for
+    /// </summary>
+    /// <returns>The type that this PropertyMetric records for</returns>
     public Type GetValueType()
     {
         return typeof(T);
     }
 
+    /// <summary>
+    /// Dumps an array of JSON data 
+    /// </summary>
+    /// <returns></returns>
     public string[] Dump()
     {
         Debug.Log("Dumping property " + recordName);

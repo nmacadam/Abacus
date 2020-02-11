@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class Abacus : MonoBehaviour
@@ -77,14 +78,41 @@ public class Abacus : MonoBehaviour
 
     public void Dump()
     {
-        foreach (var record in recordables)
+        using (var sw = new StreamWriter("./data.json"))
         {
-            var dump = record.Dump();
-            foreach (var item in dump)
+            foreach (var record in recordables)
             {
-                Debug.Log(item);
+                sw.Write(ConstructJSONMetric(record.GetValueType(), JSONWrapArray(record.Dump())));
             }
         }
+
+        foreach (var record in recordables)
+        {
+            Debug.Log(ConstructJSONMetric(record.GetValueType(), JSONWrapArray(record.Dump())));
+        }
+    }
+
+    private string ConstructJSONMetric(Type valueType, string data)
+    {
+        string output = $"{{\n\"type\":\"{valueType.Name},\"\n\"data\":\n{data}\n}}";
+        return output;
+    }
+
+    private string JSONWrapArray(string[] values)
+    {
+        string output = "[\n";
+        for (int i = 0; i < values.Length; i++)
+        {
+            output += values[i];
+            if (i != values.Length - 1)
+            {
+                output += ",";
+            }
+            output += "\n";
+        }
+        output += "]";
+
+        return output;
     }
 
     public void AddRecord(IRecordable value)

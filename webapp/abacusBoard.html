@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="./include/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./include/GoldenLayout/js/goldenlayout.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="./include/GoldenLayout/css/goldenlayout-base.css" />
+    <link type="text/css" rel="stylesheet" href="./include/GoldenLayout/css/goldenlayout-dark-theme.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css" />
+
+
+    <link type="text/css" rel="stylesheet" href="./include/abacus.css" />
+
+    <title></title>
+  </head>
+  <body>
+    <div class="overlay" id="splashScreen">
+      <button type="button" id="loadButton">Generate Abacus</button>
+      <input id="file-input" type="file" name="name" style="display: none;" />
+    </div>
+
+    <script type="text/javascript">
+      var config = {
+        content: [{
+          type: 'row',
+          content: [
+              {
+              type:'component',
+              componentName: 'Variable Line Graph',
+              componentState: { text: 'Component 1' }
+              },
+            {
+              type:'component',
+              componentName: 'example',
+              componentState: { text: 'Component 2' }
+              },
+            {
+              type:'component',
+              componentName: 'example',
+              componentState: { text: 'Component 3' }
+              }
+          ]
+        }]
+      };
+
+      var myLayout = new GoldenLayout( config );
+
+      myLayout.registerComponent( 'example', function( container, state ){
+        container.getElement().html( '<h2>' + state.text + '</h2>');
+      });
+
+      myLayout.registerComponent( 'Variable Line Graph', function( container, state ){
+        container.getElement().html( '<h2>' + state.text + '</h2>');
+      });
+
+      myLayout.init();
+    </script>
+
+
+    <script type="text/javascript" src="./include/abacus.js"></script>
+  </body>
+</html>
