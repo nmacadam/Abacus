@@ -71,7 +71,7 @@ public abstract class PropertyMetricEditor<T> : Editor
             //if (get == null) continue;
             //else if (get.GetCustomAttribute<ObsoleteAttribute>() != null) continue;
             if (propertyInfo[i].PropertyType != typeof(T)) continue;
-            propertynames.Add(propertyInfo[i].ToString());
+            propertynames.Add(propertyInfo[i].Name);
         }
 
         _selectedRecord = EditorGUILayout.Popup("Property", _selectedRecord, propertynames.ToArray());

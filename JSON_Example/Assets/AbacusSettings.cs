@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AbacusSettings : ScriptableObject
 {
+    public int BindingFlags;
     // examples:
     public float DefaultTimeStep = 1f;
     [Space]

@@ -78,13 +78,13 @@ public class Abacus : MonoBehaviour
 
     public void Dump()
     {
-        using (var sw = new StreamWriter("./data.json"))
-        {
-            foreach (var record in recordables)
-            {
-                sw.Write(ConstructJSONMetric(record.GetValueType(), JSONWrapArray(record.Dump())));
-            }
-        }
+        //using (var sw = new StreamWriter("./data.json"))
+        //{
+        //    foreach (var record in recordables)
+        //    {
+        //        sw.Write(ConstructJSONMetric(record.GetValueType(), JSONWrapArray(record.Dump())));
+        //    }
+        //}
 
         foreach (var record in recordables)
         {

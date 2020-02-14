@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31062641f47dbf43aa505fc73c32e37, type: 3}
   m_Name: Abacus Settings
   m_EditorClassIdentifier: 
+  BindingFlags: 0
   DefaultTimeStep: 1
   PeriodicDumping: 0
   DumpAfter: 30
