@@ -384,7 +384,7 @@ MonoBehaviour:
   _recordOnStart: 1
   _timeStep: 1
   recordFrom: {fileID: 1285503515}
-  recordName: _inner
+  recordName: PublicNonProperty
 --- !u!114 &1285503515
 MonoBehaviour:
   m_ObjectHideFlags: 0
