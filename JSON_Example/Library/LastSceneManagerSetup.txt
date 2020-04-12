@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Examples/SampleScene.unity
+- path: Assets/Examples/AbacusExampleGUI.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -5,13 +5,6 @@ using UnityEngine;
 
 namespace Abacus
 {
-    public interface ITemporal
-    {
-        string DisplayType { get; }
-        string GetVariableName();
-        object Dump();
-    }
-
     /// <summary>
     /// Measures generalized time duration.
     /// Use when you want to measure the of a particular event multiple times
@@ -32,42 +25,20 @@ namespace Abacus
             AbacusWriter.Instance.AddRecord(this);
         }
 
-        private void Update()
+        public void Toggle()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (_current == null)
             {
-                if (_current == null)
-                {
-                    _current = new TimeDuration();
-                    _current.StartClock();
-                    _measures.Add(_current);
-                    Debug.Log($"START: {_current.StartTime}");
-                }
-                else
-                {
-                    _current.StopClock();
-                    Debug.Log($"END: {_current.EndTime}");
-                    Debug.Log($"DURATION: {_current.Duration}");
-                    _current = null;
-                }
+                _current = new TimeDuration();
+                _current.StartClock();
+                _measures.Add(_current);
+            }
+            else
+            {
+                _current.StopClock();
+                _current = null;
             }
         }
-
-        //private void OnDisable()
-        //{
-        //    if (_measures.Count == 0) return;
-
-        //    float average = 0f;
-        //    foreach (var item in _measures)
-        //    {
-        //        if (item.EndTime < 0) continue;
-        //        average += item.Duration;
-        //    }
-
-        //    average /= _measures.Count;
-
-        //    Debug.Log($"AVERAGE DURATION: {average}");
-        //}
 
         public string GetVariableName()
         {

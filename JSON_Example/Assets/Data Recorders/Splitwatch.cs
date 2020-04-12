@@ -21,25 +21,31 @@ namespace Abacus
             AbacusWriter.Instance.AddRecord(this);
         }
 
-        void Update()
+        public void ToggleSplit(string name)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (_current == null)
             {
-                if (_current == null)
-                {
-                    _current = new Split("Split");
-                    _current.StartClock();
-                    _splits.Add(_current);
-                    Debug.Log($"{_current.Name} START: {_current.StartTime}");
-                }
-                else
-                {
-                    _current.StopClock();
-                    Debug.Log($"{_current.Name} END: {_current.EndTime}");
-                    Debug.Log($"{_current.Name} DURATION: {_current.Duration}");
-                    _current = null;
-                }
+                StartSplit(name);
             }
+            else
+            {
+                StopSplit();
+            }
+        }
+
+        public void StartSplit(string name)
+        {
+            _current = new Split(name);
+            _current.StartClock();
+            _splits.Add(_current);
+        }
+
+        public void StopSplit()
+        {
+            if (_current == null) return;
+
+            _current.StopClock();
+            _current = null;
         }
 
         public string GetVariableName()

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using Abacus.Internal;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -88,14 +89,6 @@ namespace Abacus
 
         public void Dump()
         {
-            //using (var sw = new StreamWriter("./data.json"))
-            //{
-            //    foreach (var record in recordables)
-            //    {
-            //        sw.Write(ConstructJSONMetric(record.GetValueType(), JSONWrapArray(record.Dump())));
-            //    }
-            //}
-
             List<OutputData> outputRecords = new List<OutputData>();
             foreach (var record in recordables)
             {
@@ -132,46 +125,21 @@ namespace Abacus
             );
             outputContent.Records = outputRecords.ToArray();
 
-            Debug.Log(JsonConvert.SerializeObject(outputContent, Formatting.Indented));
+            Debug.Log(JsonConvert.SerializeObject(outputContent, AbacusSettings.Instance.FormatOutput ? Formatting.Indented : Formatting.None));
 
             using (var sw = new StreamWriter("./data.json"))
             {
-                sw.Write(JsonConvert.SerializeObject(outputContent, Formatting.Indented));
+                sw.Write(JsonConvert.SerializeObject(outputContent, AbacusSettings.Instance.FormatOutput ? Formatting.Indented : Formatting.None));
             }
         }
 
-        //private string ConstructJSONMetric(Type valueType, string data)
-        //{
-        //    string output = $"{{\n\"type\":\"{valueType.Name},\"\n\"data\":\n{data}\n}}";
-        //    return output;
-        //}
-
-        //private string JSONWrapArray(string[] values)
-        //{
-        //    string output = "[\n";
-        //    for (int i = 0; i < values.Length; i++)
-        //    {
-        //        output += values[i];
-        //        if (i != values.Length - 1)
-        //        {
-        //            output += ",";
-        //        }
-        //        output += "\n";
-        //    }
-        //    output += "]";
-
-        //    return output;
-        //}
-
         public void AddRecord(ITemporal value)
         {
-            Debug.Log("Adding to recordables");
             temporals.Add(value);
         }
 
         public void AddRecord(IRecordable value)
         {
-            Debug.Log("Adding to recordables");
             recordables.Add(value);
         }
 

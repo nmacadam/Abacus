@@ -17,10 +17,13 @@ namespace Abacus
         protected bool _isEnabled = false;
         public bool IsEnabled => _isEnabled;
 
+        [SerializeField] protected GameObject recordGameObject;
         [SerializeField] protected Component recordFrom;
-        protected Type componentType;
-
+        [SerializeField] protected int recordFromIndex;
         [SerializeField] protected string recordName;
+        [SerializeField] protected int recordNameIndex;
+
+        protected Type componentType;
 
         public List<DataPoint<T>> History { get; } = new List<DataPoint<T>>();
 
@@ -47,7 +50,6 @@ namespace Abacus
         //}
         public object Dump()
         {
-            Debug.Log("Dumping metric " + recordName);
             return History.ToArray();
         }
 

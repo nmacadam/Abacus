@@ -17,20 +17,11 @@ namespace Abacus
             t.Time = Time.time;
 
             _timestamps.Add(t);
-            Debug.Log("Stamped event " + t.Name + " for time " + t.Time);
         }
 
         private void Start()
         {
             AbacusWriter.Instance.AddRecord(this);
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                Stamp("someName");
-            }
         }
 
         public string GetVariableName()
