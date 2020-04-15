@@ -24,3 +24,7 @@ Abacus provides several means to record temporal data about gameplay.  These com
 - Cumulative metrics for multiple sessions
 - Screenshot support
 - Raw data output types (.csv, etc.)
+
+### Dependencies
+- Json.NET for Unity
+- NSubstitute
