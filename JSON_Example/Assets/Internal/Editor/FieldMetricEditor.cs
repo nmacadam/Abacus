@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Abacus.Internal;
 using UnityEditor;
 using UnityEngine;
 
 namespace Abacus.Editor
 {
+    /// <summary>
+    /// Custom inspector for field metrics
+    /// </summary>
     [CustomEditor(typeof(FieldMetric<>), true)]
     public class FieldMetricEditor : UnityEditor.Editor
     {

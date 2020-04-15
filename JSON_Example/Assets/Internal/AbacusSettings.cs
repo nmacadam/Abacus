@@ -1,9 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Abacus.Internal.Utilities;
 using UnityEngine;
 
 namespace Abacus.Internal
 {
+    /// <summary>
+    /// Stores the settings of the Abacus plugin.
+    /// Modifying it's contents should be handled by the Abacus Settings Window
+    /// </summary>
     public class AbacusSettings : SingletonScriptableObject<AbacusSettings>
     {
         // examples:

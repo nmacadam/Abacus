@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 using System.Reflection;
+using Abacus.Internal;
 using UnityEngine;
 
 namespace Abacus
@@ -20,7 +21,6 @@ namespace Abacus
                 return a.Equals(b);
             }
 
-            //Debug.LogError($"Type '{typeof(T)}' does not implement IEquatable or override AreEqual method");
             return a.Equals(b);
         }
 

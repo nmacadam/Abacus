@@ -1,11 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Abacus.Internal;
 using UnityEditor;
 using UnityEngine;
 
 namespace Abacus.Editor
 {
+    /// <summary>
+    /// Custom inspector for property metrics
+    /// </summary>
     [CustomEditor(typeof(PropertyMetric<>), true)]
     public class PropertyMetricEditor : UnityEditor.Editor
     {

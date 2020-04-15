@@ -4,6 +4,9 @@ using System.Linq;
 using System.Reflection;
 using Abacus.Internal;
 
+/// <summary>
+/// Editor window for modifying the settings of the Abacus plugin
+/// </summary>
 class AbacusSettingsEditorWindow : EditorWindow
 {
     private SerializedObject _serializedSettings;

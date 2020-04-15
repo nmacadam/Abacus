@@ -1,15 +1,18 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using Abacus.Internal;
 using Newtonsoft.Json;
 using UnityEngine;
 
-namespace Abacus
+namespace Abacus.Internal
 {
+    /// <summary>
+    /// Writes the collected data to file
+    /// </summary>
     public class AbacusWriter : MonoBehaviour
     {
+        // There's multiple layers of 'shut down' here, because the writer needs to write out the json before being destroyed
+
         // Check to see if we're about to be destroyed.
         private static bool __shuttingDown = false;
         private static bool _shuttingDown
@@ -64,7 +67,10 @@ namespace Abacus
                             singletonObject.name = typeof(AbacusWriter).ToString() + " (Singleton)";
 
                             // Make instance persistent.
-                            DontDestroyOnLoad(singletonObject);
+                            if (!Application.isEditor)
+                            {
+                                DontDestroyOnLoad(singletonObject);
+                            }
                         }
                     }
 
@@ -87,6 +93,9 @@ namespace Abacus
             _shuttingDown = true;
         }
 
+        /// <summary>
+        /// Converts all registered recorder's histories to a json output
+        /// </summary>
         public void Dump()
         {
             List<OutputData> outputRecords = new List<OutputData>();
@@ -133,11 +142,19 @@ namespace Abacus
             }
         }
 
+        /// <summary>
+        /// Registers a temporal recorder
+        /// </summary>
+        /// <param name="value">The temporal recorder</param>
         public void AddRecord(ITemporal value)
         {
             temporals.Add(value);
         }
 
+        /// <summary>
+        /// Registers a recordable
+        /// </summary>
+        /// <param name="value">The recordable</param>
         public void AddRecord(IRecordable value)
         {
             recordables.Add(value);
@@ -145,5 +162,8 @@ namespace Abacus
 
         private List<IRecordable> recordables = new List<IRecordable>();
         private List<ITemporal> temporals = new List<ITemporal>();
+
+        public List<IRecordable> RegisteredRecordables => recordables;
+        public List<ITemporal> RegisteredTemporals => temporals;
     }
 }

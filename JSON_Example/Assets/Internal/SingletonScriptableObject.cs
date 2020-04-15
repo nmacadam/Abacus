@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using UnityEngine;
 
-namespace Abacus.Internal
+namespace Abacus.Internal.Utilities
 {
     /// <summary>
     /// Abstract class for making reload-proof singletons out of ScriptableObjects

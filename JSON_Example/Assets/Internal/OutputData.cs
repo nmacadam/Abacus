@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-namespace Abacus
+namespace Abacus.Internal
 {
     [Serializable]
     public struct AbacusContent
@@ -45,7 +42,6 @@ namespace Abacus
         public string DisplayType;
         public string VariableName;
         public string VariableType;
-        //public string[] Data;
         public object Data;
     }
 }

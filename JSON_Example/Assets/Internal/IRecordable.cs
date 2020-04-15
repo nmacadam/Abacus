@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Abacus
+namespace Abacus.Internal
 {
     /// <summary>
     /// Implements methods for recordability, but without any hard data type
