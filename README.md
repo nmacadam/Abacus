@@ -1,6 +1,10 @@
-<h1 align="center">
+<p align="center">
   <img src="https://raw.githubusercontent.com/nmacadam/Abacus/master/Abacus/Assets/Examples/abacus.png?token=AJA7SOMOZKBOEUGFL5O5OCC6UDJ5S" width="50%" height="50%">
-</h1>
+</p>
+<p align="center">
+  playtesting tools for unity
+</p>
+<h1></h1>
 
 ### Todo:
 - Finish testing
