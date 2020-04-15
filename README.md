@@ -1,9 +1,6 @@
 # 🧮 Abacus
 
 ### Todo:
-- Inline documentation
-- Remove unused & deprecated code
-- Generate doxyfile
 - Finish testing
 - Create Unity Package
 
