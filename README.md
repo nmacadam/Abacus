@@ -8,6 +8,9 @@
   <a href="https://opensource.org/licenses/MIT" alt="license"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a>
   <a href="https://travis-ci.com/nmacadam/Abacus" alt="build status"><img src="https://travis-ci.com/nmacadam/Abacus.svg?token=ny5jLdMxZTMpHBEyrbcp&branch=master" /></a>
 </p>
+<p align="center">
+  <a href="https://www.notion.so/Abacus-Playtesting-Metrics-1fd8efa230824700bf989c6ab67cbdf5" alt="docs">documentation</a>
+</p>
 
 ### Todo:
 - Finish testing
