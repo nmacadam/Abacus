@@ -13,7 +13,7 @@
 </p>
 
 ### Todo:
-- Finish testing
+- Figure out writing on scene-transitions
 - Create Unity Package
 
 ## Features
