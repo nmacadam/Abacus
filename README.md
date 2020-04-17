@@ -8,8 +8,12 @@
   <a href="https://opensource.org/licenses/MIT" alt="license"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a>
 </p>
 
-## Features
 Abacus is a toolkit for defining and recording game metrics during playtesting sessions.  It exports a JSON file after a playtesting session containing all of the recorded data, which can be visualized with Abacus Board.  Abacus can be integrated into a Unity project with little to no coupling and removed just as easily for production builds.
+
+## Getting Started
+Download the [latest release](https://github.com/nmacadam/Abacus/releases) and head over to the [documentation](https://www.notion.so/Abacus-Playtesting-Metrics-1fd8efa230824700bf989c6ab67cbdf5) for an introduction to the Abacus toolset.
+
+## Feature Overview
 
 ### 🧾 Generic Value Recording
 Abacus can periodically record generic type values throughout gameplay.  This is accomplished completely nonintrusively with a Metric component.  No calls like 'Abacus.RecordValue(myValue)' required--it's handled automatically!  The default time step for recording values can be globally adjusted, or a custom time step can be assigned to each Metric.  Creating a new Metric recorder is simple, either inherit from FieldMetric<> to read from fields, or PropertyMetric<> to read from properties.
