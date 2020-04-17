@@ -1,0 +1,97 @@
+\hypertarget{class_abacus_1_1_event_timestamper}{}\doxysection{Abacus.\+Event\+Timestamper Class Reference}
+\label{class_abacus_1_1_event_timestamper}\index{Abacus.EventTimestamper@{Abacus.EventTimestamper}}
+
+
+Timestamps mark a time with a string  
+
+
+Inheritance diagram for Abacus.\+Event\+Timestamper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_abacus_1_1_event_timestamper}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_abacus_1_1_event_timestamper_a84979b9a5d6d986eeb1fac0ff51bdfe2}{Stamp}} (string event\+Name)
+\begin{DoxyCompactList}\small\item\em Create a timestamp for the current time \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_abacus_1_1_event_timestamper_a048a1b00aa92a96ed99c7eb39fd488ee}{Get\+Variable\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the recorder\textquotesingle{}s name/label \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{class_abacus_1_1_event_timestamper_a6f414aa3311408e44643aa68aa7be910}{Dump}} ()
+\begin{DoxyCompactList}\small\item\em Convert the recorder data to an object for serialization \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_event_timestamper_a74e4302aeb5b4e949493c3b6cb5db092}\label{class_abacus_1_1_event_timestamper_a74e4302aeb5b4e949493c3b6cb5db092}} 
+string {\bfseries Label}
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_event_timestamper_a19351b81916b700069e9a929ead257bd}\label{class_abacus_1_1_event_timestamper_a19351b81916b700069e9a929ead257bd}} 
+List$<$ \mbox{\hyperlink{struct_abacus_1_1_event_timestamp}{Event\+Timestamp}} $>$ {\bfseries Timestamps} =$>$ \+\_\+timestamps
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_event_timestamper_a20e5dc9c06298c3f9d6501e41c988f4c}\label{class_abacus_1_1_event_timestamper_a20e5dc9c06298c3f9d6501e41c988f4c}} 
+string {\bfseries Display\+Type} =$>$ \char`\"{}timestamp\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Timestamps mark a time with a string 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_abacus_1_1_event_timestamper_a6f414aa3311408e44643aa68aa7be910}\label{class_abacus_1_1_event_timestamper_a6f414aa3311408e44643aa68aa7be910}} 
+\index{Abacus.EventTimestamper@{Abacus.EventTimestamper}!Dump@{Dump}}
+\index{Dump@{Dump}!Abacus.EventTimestamper@{Abacus.EventTimestamper}}
+\doxysubsubsection{\texorpdfstring{Dump()}{Dump()}}
+{\footnotesize\ttfamily object Abacus.\+Event\+Timestamper.\+Dump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Convert the recorder data to an object for serialization 
+
+\begin{DoxyReturn}{Returns}
+The recorder\textquotesingle{}s data as an object
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_abacus_1_1_internal_1_1_i_temporal}{Abacus.\+Internal.\+I\+Temporal}}.
+
+\mbox{\Hypertarget{class_abacus_1_1_event_timestamper_a048a1b00aa92a96ed99c7eb39fd488ee}\label{class_abacus_1_1_event_timestamper_a048a1b00aa92a96ed99c7eb39fd488ee}} 
+\index{Abacus.EventTimestamper@{Abacus.EventTimestamper}!GetVariableName@{GetVariableName}}
+\index{GetVariableName@{GetVariableName}!Abacus.EventTimestamper@{Abacus.EventTimestamper}}
+\doxysubsubsection{\texorpdfstring{GetVariableName()}{GetVariableName()}}
+{\footnotesize\ttfamily string Abacus.\+Event\+Timestamper.\+Get\+Variable\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieve the recorder\textquotesingle{}s name/label 
+
+\begin{DoxyReturn}{Returns}
+The name of the recorder
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_abacus_1_1_internal_1_1_i_temporal}{Abacus.\+Internal.\+I\+Temporal}}.
+
+\mbox{\Hypertarget{class_abacus_1_1_event_timestamper_a84979b9a5d6d986eeb1fac0ff51bdfe2}\label{class_abacus_1_1_event_timestamper_a84979b9a5d6d986eeb1fac0ff51bdfe2}} 
+\index{Abacus.EventTimestamper@{Abacus.EventTimestamper}!Stamp@{Stamp}}
+\index{Stamp@{Stamp}!Abacus.EventTimestamper@{Abacus.EventTimestamper}}
+\doxysubsubsection{\texorpdfstring{Stamp()}{Stamp()}}
+{\footnotesize\ttfamily void Abacus.\+Event\+Timestamper.\+Stamp (\begin{DoxyParamCaption}\item[{string}]{event\+Name }\end{DoxyParamCaption})}
+
+
+
+Create a timestamp for the current time 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Name} & Name of the event being stamped\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Event\+Timestamper.\+cs\end{DoxyCompactItemize}

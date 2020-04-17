@@ -1,0 +1,129 @@
+\hypertarget{class_abacus_1_1_splitwatch}{}\doxysection{Abacus.\+Splitwatch Class Reference}
+\label{class_abacus_1_1_splitwatch}\index{Abacus.Splitwatch@{Abacus.Splitwatch}}
+
+
+Measures splits (discrete, sequential durations). Use when you want to measure the time each event in a sequence takes to complete  
+
+
+Inheritance diagram for Abacus.\+Splitwatch\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_abacus_1_1_splitwatch}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_abacus_1_1_splitwatch_a28d7058f2b2d19be3211bc856ca0add5}{Toggle\+Split}} (string name)
+\begin{DoxyCompactList}\small\item\em Toggle the current split\textquotesingle{}s state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abacus_1_1_splitwatch_a4c619b560020ed5d722c6eb4ddc99d30}{Start\+Split}} (string name)
+\begin{DoxyCompactList}\small\item\em Start a new split \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abacus_1_1_splitwatch_aa74963abfd06fabcd149c68e0d924125}{Stop\+Split}} ()
+\begin{DoxyCompactList}\small\item\em Stop the active split \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_abacus_1_1_splitwatch_a50282ceba395569fa0d27b6e155990c0}{Get\+Variable\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the splitwatch\textquotesingle{}s name/label \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{class_abacus_1_1_splitwatch_a3a4a8fd1766d44d3686d702a26b71c63}{Dump}} ()
+\begin{DoxyCompactList}\small\item\em Convert the recorder data to an object for serialization \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_splitwatch_ab4a4bfd7330fd6ec76f41b26ceca8f53}\label{class_abacus_1_1_splitwatch_ab4a4bfd7330fd6ec76f41b26ceca8f53}} 
+string {\bfseries Label}
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_splitwatch_a5fffa57a7e49052f5ab6334bd5c380cf}\label{class_abacus_1_1_splitwatch_a5fffa57a7e49052f5ab6334bd5c380cf}} 
+List$<$ \mbox{\hyperlink{class_abacus_1_1_split}{Split}} $>$ {\bfseries Splits} =$>$ \+\_\+splits
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_splitwatch_a13b11726e68f91ff88063ba8290e115b}\label{class_abacus_1_1_splitwatch_a13b11726e68f91ff88063ba8290e115b}} 
+bool {\bfseries Is\+Recording} =$>$ (\+\_\+current != null)
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_splitwatch_aabc0dc9857fe2e768982d5a40821de38}\label{class_abacus_1_1_splitwatch_aabc0dc9857fe2e768982d5a40821de38}} 
+string {\bfseries Display\+Type} =$>$ \char`\"{}splitwatch\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Measures splits (discrete, sequential durations). Use when you want to measure the time each event in a sequence takes to complete 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_abacus_1_1_splitwatch_a3a4a8fd1766d44d3686d702a26b71c63}\label{class_abacus_1_1_splitwatch_a3a4a8fd1766d44d3686d702a26b71c63}} 
+\index{Abacus.Splitwatch@{Abacus.Splitwatch}!Dump@{Dump}}
+\index{Dump@{Dump}!Abacus.Splitwatch@{Abacus.Splitwatch}}
+\doxysubsubsection{\texorpdfstring{Dump()}{Dump()}}
+{\footnotesize\ttfamily object Abacus.\+Splitwatch.\+Dump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Convert the recorder data to an object for serialization 
+
+\begin{DoxyReturn}{Returns}
+The recorder\textquotesingle{}s data as an object
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_abacus_1_1_internal_1_1_i_temporal}{Abacus.\+Internal.\+I\+Temporal}}.
+
+\mbox{\Hypertarget{class_abacus_1_1_splitwatch_a50282ceba395569fa0d27b6e155990c0}\label{class_abacus_1_1_splitwatch_a50282ceba395569fa0d27b6e155990c0}} 
+\index{Abacus.Splitwatch@{Abacus.Splitwatch}!GetVariableName@{GetVariableName}}
+\index{GetVariableName@{GetVariableName}!Abacus.Splitwatch@{Abacus.Splitwatch}}
+\doxysubsubsection{\texorpdfstring{GetVariableName()}{GetVariableName()}}
+{\footnotesize\ttfamily string Abacus.\+Splitwatch.\+Get\+Variable\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieve the splitwatch\textquotesingle{}s name/label 
+
+\begin{DoxyReturn}{Returns}
+The name of the recorder
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_abacus_1_1_internal_1_1_i_temporal}{Abacus.\+Internal.\+I\+Temporal}}.
+
+\mbox{\Hypertarget{class_abacus_1_1_splitwatch_a4c619b560020ed5d722c6eb4ddc99d30}\label{class_abacus_1_1_splitwatch_a4c619b560020ed5d722c6eb4ddc99d30}} 
+\index{Abacus.Splitwatch@{Abacus.Splitwatch}!StartSplit@{StartSplit}}
+\index{StartSplit@{StartSplit}!Abacus.Splitwatch@{Abacus.Splitwatch}}
+\doxysubsubsection{\texorpdfstring{StartSplit()}{StartSplit()}}
+{\footnotesize\ttfamily void Abacus.\+Splitwatch.\+Start\+Split (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Start a new split 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the split\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_abacus_1_1_splitwatch_aa74963abfd06fabcd149c68e0d924125}\label{class_abacus_1_1_splitwatch_aa74963abfd06fabcd149c68e0d924125}} 
+\index{Abacus.Splitwatch@{Abacus.Splitwatch}!StopSplit@{StopSplit}}
+\index{StopSplit@{StopSplit}!Abacus.Splitwatch@{Abacus.Splitwatch}}
+\doxysubsubsection{\texorpdfstring{StopSplit()}{StopSplit()}}
+{\footnotesize\ttfamily void Abacus.\+Splitwatch.\+Stop\+Split (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stop the active split 
+
+\mbox{\Hypertarget{class_abacus_1_1_splitwatch_a28d7058f2b2d19be3211bc856ca0add5}\label{class_abacus_1_1_splitwatch_a28d7058f2b2d19be3211bc856ca0add5}} 
+\index{Abacus.Splitwatch@{Abacus.Splitwatch}!ToggleSplit@{ToggleSplit}}
+\index{ToggleSplit@{ToggleSplit}!Abacus.Splitwatch@{Abacus.Splitwatch}}
+\doxysubsubsection{\texorpdfstring{ToggleSplit()}{ToggleSplit()}}
+{\footnotesize\ttfamily void Abacus.\+Splitwatch.\+Toggle\+Split (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Toggle the current split\textquotesingle{}s state 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the split\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Splitwatch.\+cs\end{DoxyCompactItemize}

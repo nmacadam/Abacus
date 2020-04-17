@@ -1,0 +1,313 @@
+\hypertarget{class_abacus_1_1_internal_1_1_metric}{}\doxysection{Abacus.\+Internal.\+Metric$<$ T $>$ Class Template Reference}
+\label{class_abacus_1_1_internal_1_1_metric}\index{Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}}
+
+
+Abstract base class for all \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Metric}} types; Create a new \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Metric}} class by inheriting from this  
+
+
+Inheritance diagram for Abacus.\+Internal.\+Metric$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_abacus_1_1_internal_1_1_metric}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric_a9b234a41eea5eefb1f040181fc475316}{Attach\+Variable}} (Component component, string variable\+Name)
+\begin{DoxyCompactList}\small\item\em Attach a variable to the metric to be recorded \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric_aac2c92501c52fb202785eb8430990c05}{Dump}} ()
+\begin{DoxyCompactList}\small\item\em Returns the metric\textquotesingle{}s data as an object to be serialized \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric_a60d62b5b9427b2e8561d62975a776d40}{Get\+Variable\+Name}} ()
+\begin{DoxyCompactList}\small\item\em The name of the variable that this \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Metric}} records \end{DoxyCompactList}\item 
+Type \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric_a6b8463eb1d0b5f04009fb3c5ee7b45c9}{Get\+Value\+Type}} ()
+\begin{DoxyCompactList}\small\item\em The type that this \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Metric}} records \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_a89344a35ae5eb67423def0f6cfd5255f}\label{class_abacus_1_1_internal_1_1_metric_a89344a35ae5eb67423def0f6cfd5255f}} 
+abstract T {\bfseries Get\+Value} ()
+\item 
+T \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric_adcd92b59a9a785f37ffbdc2d20ade0a3}{Get\+Last\+Recorded\+Value}} ()
+\begin{DoxyCompactList}\small\item\em The last value recorded by this metric \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric_ab979dfc5a59bac2ae3ea0a8dac7cb7e1}{Record}} ()
+\begin{DoxyCompactList}\small\item\em Records the current value of the attached variable \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric_a42cf854b920f6bc6cb62d4fbf2087aaa}{Set\+Source}} (Component component)
+\begin{DoxyCompactList}\small\item\em Sets the component that the metric retrieves a field or property from \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric_a94835d80dd5d07203cd87f2ad76b6f12}{Set\+Time\+Step}} (float time\+Step)
+\begin{DoxyCompactList}\small\item\em Sets the time step for the recorder \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric_a1d3812813c373aed6152c01be08904a1}{Enable}} ()
+\begin{DoxyCompactList}\small\item\em Enables the metric recorder \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric_ab9db622565913bcd878e287e4435d7bb}{Disable}} ()
+\begin{DoxyCompactList}\small\item\em Disables the metric recorder \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric_ae95292916b025ffe0668d07d3c5692a8}{Time\+Step}} =$>$ \+\_\+time\+Step
+\begin{DoxyCompactList}\small\item\em The time step duration of the metric recorder \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric_a6b1e54527addb26d8ae70b16d66442ff}{Is\+Enabled}} =$>$ \+\_\+is\+Enabled
+\begin{DoxyCompactList}\small\item\em Whether the metric recorder is enabled \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_a92d94348f21b8b6262f4384a0c2d5940}\label{class_abacus_1_1_internal_1_1_metric_a92d94348f21b8b6262f4384a0c2d5940}} 
+bool {\bfseries \+\_\+record\+On\+Start} = true
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_a061a7257816f80ada68ee1123a480987}\label{class_abacus_1_1_internal_1_1_metric_a061a7257816f80ada68ee1123a480987}} 
+float {\bfseries \+\_\+time\+Step} = 1f
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_aadb3555d47277626e47d89a4ebe201b9}\label{class_abacus_1_1_internal_1_1_metric_aadb3555d47277626e47d89a4ebe201b9}} 
+bool {\bfseries \+\_\+is\+Enabled} = false
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_a8dcf14716ac06aaf2b3ba9629d306d1e}\label{class_abacus_1_1_internal_1_1_metric_a8dcf14716ac06aaf2b3ba9629d306d1e}} 
+Game\+Object {\bfseries record\+Game\+Object}
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_ab7ed00232ceb1b06ea99e7f228a1b2e9}\label{class_abacus_1_1_internal_1_1_metric_ab7ed00232ceb1b06ea99e7f228a1b2e9}} 
+Component {\bfseries record\+From}
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_a21fc221c9fae2c7a6d1b3bbf3e163685}\label{class_abacus_1_1_internal_1_1_metric_a21fc221c9fae2c7a6d1b3bbf3e163685}} 
+int {\bfseries record\+From\+Index}
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_aff4613f14dbb41bc8da70770f059f2ca}\label{class_abacus_1_1_internal_1_1_metric_aff4613f14dbb41bc8da70770f059f2ca}} 
+string {\bfseries record\+Name}
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_a35d4124ef4a47e0c09e2cd633a58e5c3}\label{class_abacus_1_1_internal_1_1_metric_a35d4124ef4a47e0c09e2cd633a58e5c3}} 
+int {\bfseries record\+Name\+Index}
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_af2171b954ab13199ff74b4b71afe8a70}\label{class_abacus_1_1_internal_1_1_metric_af2171b954ab13199ff74b4b71afe8a70}} 
+Type {\bfseries component\+Type}
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_aedfb4e2634146afdfc4e472dcc8c020c}\label{class_abacus_1_1_internal_1_1_metric_aedfb4e2634146afdfc4e472dcc8c020c}} 
+float {\bfseries start\+Time}
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_a3c2f41fbe235f8abe710c4b17fe1d1ff}\label{class_abacus_1_1_internal_1_1_metric_a3c2f41fbe235f8abe710c4b17fe1d1ff}} 
+T {\bfseries \+\_\+last\+Recorded\+Value}
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_a65116a4f5b39586619cd59ebdf361460}\label{class_abacus_1_1_internal_1_1_metric_a65116a4f5b39586619cd59ebdf361460}} 
+T {\bfseries \+\_\+previous\+Value}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+abstract bool \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric_a3591e790840fa09c296bb3fec46e18e0}{Retrieved\+Member}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the metric recorder has retrieved the field/property it will record the value of \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{struct_abacus_1_1_data_point}{Data\+Point}}$<$ T $>$ $>$ \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric_a5b29d1e760d3f5ea370adb2494bd33ea}{History}} = new List$<$\mbox{\hyperlink{struct_abacus_1_1_data_point}{Data\+Point}}$<$T$>$$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The history of recorded values for this metric \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for all \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Metric}} types; Create a new \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Metric}} class by inheriting from this 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type for the metric to hold\\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_a9b234a41eea5eefb1f040181fc475316}\label{class_abacus_1_1_internal_1_1_metric_a9b234a41eea5eefb1f040181fc475316}} 
+\index{Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}!AttachVariable@{AttachVariable}}
+\index{AttachVariable@{AttachVariable}!Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AttachVariable()}{AttachVariable()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Abacus.\+Internal.\+Metric}}$<$ T $>$.Attach\+Variable (\begin{DoxyParamCaption}\item[{Component}]{component,  }\item[{string}]{variable\+Name }\end{DoxyParamCaption})}
+
+
+
+Attach a variable to the metric to be recorded 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & The component the variable is a member of\\
+\hline
+{\em variable\+Name} & The variable name as a string\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_ab9db622565913bcd878e287e4435d7bb}\label{class_abacus_1_1_internal_1_1_metric_ab9db622565913bcd878e287e4435d7bb}} 
+\index{Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}!Disable@{Disable}}
+\index{Disable@{Disable}!Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Disable()}{Disable()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Abacus.\+Internal.\+Metric}}$<$ T $>$.Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Disables the metric recorder 
+
+
+
+Implements \mbox{\hyperlink{interface_abacus_1_1_internal_1_1_i_recordable}{Abacus.\+Internal.\+I\+Recordable}}.
+
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_aac2c92501c52fb202785eb8430990c05}\label{class_abacus_1_1_internal_1_1_metric_aac2c92501c52fb202785eb8430990c05}} 
+\index{Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}!Dump@{Dump}}
+\index{Dump@{Dump}!Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Dump()}{Dump()}}
+{\footnotesize\ttfamily object \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Abacus.\+Internal.\+Metric}}$<$ T $>$.Dump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the metric\textquotesingle{}s data as an object to be serialized 
+
+\begin{DoxyReturn}{Returns}
+The metric\textquotesingle{}s data as an object
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_abacus_1_1_internal_1_1_i_recordable}{Abacus.\+Internal.\+I\+Recordable}}.
+
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_a1d3812813c373aed6152c01be08904a1}\label{class_abacus_1_1_internal_1_1_metric_a1d3812813c373aed6152c01be08904a1}} 
+\index{Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}!Enable@{Enable}}
+\index{Enable@{Enable}!Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Enable()}{Enable()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Abacus.\+Internal.\+Metric}}$<$ T $>$.Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables the metric recorder 
+
+
+
+Implements \mbox{\hyperlink{interface_abacus_1_1_internal_1_1_i_recordable}{Abacus.\+Internal.\+I\+Recordable}}.
+
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_adcd92b59a9a785f37ffbdc2d20ade0a3}\label{class_abacus_1_1_internal_1_1_metric_adcd92b59a9a785f37ffbdc2d20ade0a3}} 
+\index{Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}!GetLastRecordedValue@{GetLastRecordedValue}}
+\index{GetLastRecordedValue@{GetLastRecordedValue}!Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetLastRecordedValue()}{GetLastRecordedValue()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Abacus.\+Internal.\+Metric}}$<$ T $>$.Get\+Last\+Recorded\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The last value recorded by this metric 
+
+\begin{DoxyReturn}{Returns}
+The last value recorded by this metric
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_a6b8463eb1d0b5f04009fb3c5ee7b45c9}\label{class_abacus_1_1_internal_1_1_metric_a6b8463eb1d0b5f04009fb3c5ee7b45c9}} 
+\index{Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}!GetValueType@{GetValueType}}
+\index{GetValueType@{GetValueType}!Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetValueType()}{GetValueType()}}
+{\footnotesize\ttfamily Type \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Abacus.\+Internal.\+Metric}}$<$ T $>$.Get\+Value\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The type that this \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Metric}} records 
+
+\begin{DoxyReturn}{Returns}
+The type that this \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Metric}} records for
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_abacus_1_1_internal_1_1_i_recordable}{Abacus.\+Internal.\+I\+Recordable}}.
+
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_a60d62b5b9427b2e8561d62975a776d40}\label{class_abacus_1_1_internal_1_1_metric_a60d62b5b9427b2e8561d62975a776d40}} 
+\index{Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}!GetVariableName@{GetVariableName}}
+\index{GetVariableName@{GetVariableName}!Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetVariableName()}{GetVariableName()}}
+{\footnotesize\ttfamily string \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Abacus.\+Internal.\+Metric}}$<$ T $>$.Get\+Variable\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The name of the variable that this \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Metric}} records 
+
+\begin{DoxyReturn}{Returns}
+The type that this \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Metric}} records for
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_abacus_1_1_internal_1_1_i_recordable}{Abacus.\+Internal.\+I\+Recordable}}.
+
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_ab979dfc5a59bac2ae3ea0a8dac7cb7e1}\label{class_abacus_1_1_internal_1_1_metric_ab979dfc5a59bac2ae3ea0a8dac7cb7e1}} 
+\index{Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}!Record@{Record}}
+\index{Record@{Record}!Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Record()}{Record()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Abacus.\+Internal.\+Metric}}$<$ T $>$.Record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Records the current value of the attached variable 
+
+
+
+Implements \mbox{\hyperlink{interface_abacus_1_1_internal_1_1_i_recordable}{Abacus.\+Internal.\+I\+Recordable}}.
+
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_a42cf854b920f6bc6cb62d4fbf2087aaa}\label{class_abacus_1_1_internal_1_1_metric_a42cf854b920f6bc6cb62d4fbf2087aaa}} 
+\index{Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}!SetSource@{SetSource}}
+\index{SetSource@{SetSource}!Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetSource()}{SetSource()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Abacus.\+Internal.\+Metric}}$<$ T $>$.Set\+Source (\begin{DoxyParamCaption}\item[{Component}]{component }\end{DoxyParamCaption})}
+
+
+
+Sets the component that the metric retrieves a field or property from 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_abacus_1_1_internal_1_1_i_recordable}{Abacus.\+Internal.\+I\+Recordable}}.
+
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_a94835d80dd5d07203cd87f2ad76b6f12}\label{class_abacus_1_1_internal_1_1_metric_a94835d80dd5d07203cd87f2ad76b6f12}} 
+\index{Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}!SetTimeStep@{SetTimeStep}}
+\index{SetTimeStep@{SetTimeStep}!Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetTimeStep()}{SetTimeStep()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Abacus.\+Internal.\+Metric}}$<$ T $>$.Set\+Time\+Step (\begin{DoxyParamCaption}\item[{float}]{time\+Step }\end{DoxyParamCaption})}
+
+
+
+Sets the time step for the recorder 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Step} & The new time step duration (s)\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_a6b1e54527addb26d8ae70b16d66442ff}\label{class_abacus_1_1_internal_1_1_metric_a6b1e54527addb26d8ae70b16d66442ff}} 
+\index{Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}!IsEnabled@{IsEnabled}}
+\index{IsEnabled@{IsEnabled}!Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IsEnabled}{IsEnabled}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Abacus.\+Internal.\+Metric}}$<$ T $>$.Is\+Enabled =$>$ \+\_\+is\+Enabled}
+
+
+
+Whether the metric recorder is enabled 
+
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_ae95292916b025ffe0668d07d3c5692a8}\label{class_abacus_1_1_internal_1_1_metric_ae95292916b025ffe0668d07d3c5692a8}} 
+\index{Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}!TimeStep@{TimeStep}}
+\index{TimeStep@{TimeStep}!Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{TimeStep}{TimeStep}}
+{\footnotesize\ttfamily float \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Abacus.\+Internal.\+Metric}}$<$ T $>$.Time\+Step =$>$ \+\_\+time\+Step}
+
+
+
+The time step duration of the metric recorder 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_a5b29d1e760d3f5ea370adb2494bd33ea}\label{class_abacus_1_1_internal_1_1_metric_a5b29d1e760d3f5ea370adb2494bd33ea}} 
+\index{Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}!History@{History}}
+\index{History@{History}!Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{History}{History}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{struct_abacus_1_1_data_point}{Data\+Point}}$<$T$>$ $>$ \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Abacus.\+Internal.\+Metric}}$<$ T $>$.History = new List$<$\mbox{\hyperlink{struct_abacus_1_1_data_point}{Data\+Point}}$<$T$>$$>$()\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The history of recorded values for this metric 
+
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_metric_a3591e790840fa09c296bb3fec46e18e0}\label{class_abacus_1_1_internal_1_1_metric_a3591e790840fa09c296bb3fec46e18e0}} 
+\index{Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}!RetrievedMember@{RetrievedMember}}
+\index{RetrievedMember@{RetrievedMember}!Abacus.Internal.Metric$<$ T $>$@{Abacus.Internal.Metric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{RetrievedMember}{RetrievedMember}}
+{\footnotesize\ttfamily abstract bool \mbox{\hyperlink{class_abacus_1_1_internal_1_1_metric}{Abacus.\+Internal.\+Metric}}$<$ T $>$.Retrieved\+Member\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Whether the metric recorder has retrieved the field/property it will record the value of 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Metric.\+cs\end{DoxyCompactItemize}

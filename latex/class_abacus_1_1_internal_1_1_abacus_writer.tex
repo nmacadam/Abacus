@@ -1,0 +1,114 @@
+\hypertarget{class_abacus_1_1_internal_1_1_abacus_writer}{}\doxysection{Abacus.\+Internal.\+Abacus\+Writer Class Reference}
+\label{class_abacus_1_1_internal_1_1_abacus_writer}\index{Abacus.Internal.AbacusWriter@{Abacus.Internal.AbacusWriter}}
+
+
+Writes the collected data to file  
+
+
+Inheritance diagram for Abacus.\+Internal.\+Abacus\+Writer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_abacus_1_1_internal_1_1_abacus_writer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_abacus_1_1_internal_1_1_abacus_writer_ad0786950e359f5fb54f4620006346615}{Store\+Intermediate\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Stores a temporary \mbox{\hyperlink{struct_abacus_1_1_internal_1_1_output_data}{Output\+Data}} object for export at the end of the application or on a Dump call \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abacus_1_1_internal_1_1_abacus_writer_a241a5bc5a7129dcaf0782fe2ac833ce4}{Dump}} ()
+\begin{DoxyCompactList}\small\item\em Converts all registered recorder\textquotesingle{}s histories to a json output \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abacus_1_1_internal_1_1_abacus_writer_a795715eb408921ff0ded76570ce5a17e}{Add\+Record}} (\mbox{\hyperlink{interface_abacus_1_1_internal_1_1_i_temporal}{I\+Temporal}} value)
+\begin{DoxyCompactList}\small\item\em Registers a temporal recorder \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abacus_1_1_internal_1_1_abacus_writer_a49c02389c2fe2fbd4b91810ff8a48829}{Add\+Record}} (\mbox{\hyperlink{interface_abacus_1_1_internal_1_1_i_recordable}{I\+Recordable}} value)
+\begin{DoxyCompactList}\small\item\em Registers a recordable \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_abacus_writer_a4eb28bdeb07c44adcde72ffe304df501}\label{class_abacus_1_1_internal_1_1_abacus_writer_a4eb28bdeb07c44adcde72ffe304df501}} 
+List$<$ \mbox{\hyperlink{interface_abacus_1_1_internal_1_1_i_recordable}{I\+Recordable}} $>$ {\bfseries Registered\+Recordables} =$>$ recordables
+\item 
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_abacus_writer_a5f393a48d96f03b5c2823c8dd6987438}\label{class_abacus_1_1_internal_1_1_abacus_writer_a5f393a48d96f03b5c2823c8dd6987438}} 
+List$<$ \mbox{\hyperlink{interface_abacus_1_1_internal_1_1_i_temporal}{I\+Temporal}} $>$ {\bfseries Registered\+Temporals} =$>$ temporals
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_abacus_1_1_internal_1_1_abacus_writer}{Abacus\+Writer}} \mbox{\hyperlink{class_abacus_1_1_internal_1_1_abacus_writer_af3e82b035025114bb38279b7049c91e8}{Instance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Access singleton instance through this propriety. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Writes the collected data to file 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_abacus_writer_a49c02389c2fe2fbd4b91810ff8a48829}\label{class_abacus_1_1_internal_1_1_abacus_writer_a49c02389c2fe2fbd4b91810ff8a48829}} 
+\index{Abacus.Internal.AbacusWriter@{Abacus.Internal.AbacusWriter}!AddRecord@{AddRecord}}
+\index{AddRecord@{AddRecord}!Abacus.Internal.AbacusWriter@{Abacus.Internal.AbacusWriter}}
+\doxysubsubsection{\texorpdfstring{AddRecord()}{AddRecord()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Abacus.\+Internal.\+Abacus\+Writer.\+Add\+Record (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_abacus_1_1_internal_1_1_i_recordable}{I\+Recordable}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Registers a recordable 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The recordable\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_abacus_writer_a795715eb408921ff0ded76570ce5a17e}\label{class_abacus_1_1_internal_1_1_abacus_writer_a795715eb408921ff0ded76570ce5a17e}} 
+\index{Abacus.Internal.AbacusWriter@{Abacus.Internal.AbacusWriter}!AddRecord@{AddRecord}}
+\index{AddRecord@{AddRecord}!Abacus.Internal.AbacusWriter@{Abacus.Internal.AbacusWriter}}
+\doxysubsubsection{\texorpdfstring{AddRecord()}{AddRecord()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Abacus.\+Internal.\+Abacus\+Writer.\+Add\+Record (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_abacus_1_1_internal_1_1_i_temporal}{I\+Temporal}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Registers a temporal recorder 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The temporal recorder\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_abacus_writer_a241a5bc5a7129dcaf0782fe2ac833ce4}\label{class_abacus_1_1_internal_1_1_abacus_writer_a241a5bc5a7129dcaf0782fe2ac833ce4}} 
+\index{Abacus.Internal.AbacusWriter@{Abacus.Internal.AbacusWriter}!Dump@{Dump}}
+\index{Dump@{Dump}!Abacus.Internal.AbacusWriter@{Abacus.Internal.AbacusWriter}}
+\doxysubsubsection{\texorpdfstring{Dump()}{Dump()}}
+{\footnotesize\ttfamily void Abacus.\+Internal.\+Abacus\+Writer.\+Dump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Converts all registered recorder\textquotesingle{}s histories to a json output 
+
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_abacus_writer_ad0786950e359f5fb54f4620006346615}\label{class_abacus_1_1_internal_1_1_abacus_writer_ad0786950e359f5fb54f4620006346615}} 
+\index{Abacus.Internal.AbacusWriter@{Abacus.Internal.AbacusWriter}!StoreIntermediateData@{StoreIntermediateData}}
+\index{StoreIntermediateData@{StoreIntermediateData}!Abacus.Internal.AbacusWriter@{Abacus.Internal.AbacusWriter}}
+\doxysubsubsection{\texorpdfstring{StoreIntermediateData()}{StoreIntermediateData()}}
+{\footnotesize\ttfamily void Abacus.\+Internal.\+Abacus\+Writer.\+Store\+Intermediate\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stores a temporary \mbox{\hyperlink{struct_abacus_1_1_internal_1_1_output_data}{Output\+Data}} object for export at the end of the application or on a Dump call 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_abacus_1_1_internal_1_1_abacus_writer_af3e82b035025114bb38279b7049c91e8}\label{class_abacus_1_1_internal_1_1_abacus_writer_af3e82b035025114bb38279b7049c91e8}} 
+\index{Abacus.Internal.AbacusWriter@{Abacus.Internal.AbacusWriter}!Instance@{Instance}}
+\index{Instance@{Instance}!Abacus.Internal.AbacusWriter@{Abacus.Internal.AbacusWriter}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_abacus_1_1_internal_1_1_abacus_writer}{Abacus\+Writer}} Abacus.\+Internal.\+Abacus\+Writer.\+Instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+Access singleton instance through this propriety. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Abacus\+Writer.\+cs\end{DoxyCompactItemize}
