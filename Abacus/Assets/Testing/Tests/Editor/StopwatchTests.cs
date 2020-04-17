@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Abacus.Internal;
+using NUnit.Framework;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
@@ -71,6 +72,7 @@ namespace Abacus.Tests
         [Test]
         public void StopwatchRegistersSelfToWriter()
         {
+            TestUtilities.InvokeInstanceMethod(_stopwatch, "Start");
             Assert.Contains(_stopwatch, AbacusWriter.Instance.RegisteredTemporals);
         }
     }

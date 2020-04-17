@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Abacus.Internal;
+using NUnit.Framework;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
@@ -45,6 +46,7 @@ namespace Abacus.Tests
         [Test]
         public void TimestampRegistersSelfToWriter()
         {
+            TestUtilities.InvokeInstanceMethod(_timestamper, "Start");
             Assert.Contains(_timestamper, AbacusWriter.Instance.RegisteredTemporals);
         }
     }

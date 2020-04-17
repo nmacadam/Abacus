@@ -39,11 +39,11 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 589
+    y: 631
     width: 435
-    height: 358
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    height: 316
+  m_MinSize: {x: 204, y: 222}
+  m_MaxSize: {x: 4004, y: 4022}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -70,10 +70,10 @@ MonoBehaviour:
     y: 0
     width: 435
     height: 947
-  m_MinSize: {x: 277, y: 294}
-  m_MaxSize: {x: 4002, y: 8044}
+  m_MinSize: {x: 275, y: 272}
+  m_MaxSize: {x: 4004, y: 8022}
   vertical: 1
-  controlID: 124
+  controlID: 137
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 472}
   m_MaxSize: {x: 10002, y: 14022}
   vertical: 1
-  controlID: 34
+  controlID: 55
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,10 +146,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 613, y: 472}
-  m_MaxSize: {x: 18008, y: 14022}
+  m_MinSize: {x: 711, y: 472}
+  m_MaxSize: {x: 18010, y: 14022}
   vertical: 0
-  controlID: 123
+  controlID: 136
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,9 +168,9 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 435
-    height: 589
-  m_MinSize: {x: 277, y: 72}
-  m_MaxSize: {x: 4002, y: 4022}
+    height: 631
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -290,10 +290,10 @@ MonoBehaviour:
     y: 0
     width: 1485
     height: 947
-  m_MinSize: {x: 336, y: 472}
+  m_MinSize: {x: 436, y: 472}
   m_MaxSize: {x: 14006, y: 14022}
   vertical: 0
-  controlID: 98
+  controlID: 100
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -313,9 +313,9 @@ MonoBehaviour:
     y: 0
     width: 991
     height: 947
-  m_MinSize: {x: 104, y: 122}
+  m_MinSize: {x: 204, y: 222}
   m_MaxSize: {x: 4004, y: 4022}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
   - {fileID: 15}
@@ -323,8 +323,8 @@ MonoBehaviour:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 14}
-  m_Selected: 5
-  m_LastSelected: 3
+  m_Selected: 0
+  m_LastSelected: 2
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -352,15 +352,31 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_TestTypeToolbarIndex: 1
   m_PlayModeTestListGUI:
-    m_Window: {fileID: 0}
-    newResultList: []
+    m_Window: {fileID: 14}
+    newResultList:
+    - id: 1002
+      uniqueId: '[Abacus][suite]'
+      name: Abacus
+      fullName: Abacus
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
     m_ResultText: 
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 
+      m_ExpandedIDs: 059cc0feffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -384,7 +400,8 @@ MonoBehaviour:
       NotRunHidden: 0
       m_SearchString: 
       selectedCategoryMask: 0
-      availableCategories: []
+      availableCategories:
+      - Uncategorized
   m_EditModeTestListGUI:
     m_Window: {fileID: 14}
     newResultList:
@@ -392,8 +409,8 @@ MonoBehaviour:
       uniqueId: '[Abacus][suite]'
       name: Abacus
       fullName: Abacus
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 2.258686
       messages: 
       output: 
       stacktrace: 
@@ -404,12 +421,12 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1004
+    - id: 1031
       uniqueId: '[D:/Users/Nathan/Abacus/Abacus/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll][suite]'
       name: Assembly-CSharp-Editor.dll
       fullName: D:/Users/Nathan/Abacus/Abacus/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 2.1533093
       messages: 
       output: 
       stacktrace: 
@@ -420,12 +437,12 @@ MonoBehaviour:
       categories: []
       parentId: 1000
       parentUniqueId: '[Abacus][suite]'
-    - id: 1005
-      uniqueId: Assembly-CSharp-Editor.dll/[Tests][suite]
-      name: Tests
-      fullName: Tests
-      resultStatus: 0
-      duration: 0
+    - id: 1032
+      uniqueId: Assembly-CSharp-Editor.dll/[Abacus][suite]
+      name: Abacus
+      fullName: Abacus
+      resultStatus: 1
+      duration: 2.0739765
       messages: 
       output: 
       stacktrace: 
@@ -434,14 +451,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1004
+      parentId: 1031
       parentUniqueId: '[D:/Users/Nathan/Abacus/Abacus/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll][suite]'
-    - id: 1001
-      uniqueId: Assembly-CSharp-Editor.dll/Tests/[Assembly-CSharp-Editor][Tests.NewTestScript][suite]
-      name: NewTestScript
-      fullName: Tests.NewTestScript
-      resultStatus: 0
-      duration: 0
+    - id: 1033
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/[Abacus.Tests][suite]
+      name: Tests
+      fullName: Abacus.Tests
+      resultStatus: 1
+      duration: 2.0216174
       messages: 
       output: 
       stacktrace: 
@@ -450,14 +467,30 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1005
-      parentUniqueId: Assembly-CSharp-Editor.dll/[Tests][suite]
+      parentId: 1032
+      parentUniqueId: Assembly-CSharp-Editor.dll/[Abacus][suite]
+    - id: 1001
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.AbacusWriterTests][suite]
+      name: AbacusWriterTests
+      fullName: Abacus.Tests.AbacusWriterTests
+      resultStatus: 1
+      duration: 0.6066018
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1033
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/[Abacus.Tests][suite]
     - id: 1002
-      uniqueId: Assembly-CSharp-Editor.dll/Tests/NewTestScript/[Assembly-CSharp-Editor][Tests.NewTestScript.NewTestScriptSimplePasses]
-      name: NewTestScriptSimplePasses
-      fullName: Tests.NewTestScript.NewTestScriptSimplePasses
-      resultStatus: 0
-      duration: 0
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/AbacusWriterTests/[Assembly-CSharp-Editor][Abacus.Tests.AbacusWriterTests.LazyInstantiationIsNotNull]
+      name: LazyInstantiationIsNotNull
+      fullName: Abacus.Tests.AbacusWriterTests.LazyInstantiationIsNotNull
+      resultStatus: 1
+      duration: 0.0637589
       messages: 
       output: 
       stacktrace: 
@@ -468,13 +501,30 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: Assembly-CSharp-Editor.dll/Tests/[Assembly-CSharp-Editor][Tests.NewTestScript][suite]
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.AbacusWriterTests][suite]
+    - id: 1004
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/AbacusWriterTests/[Assembly-CSharp-Editor][Abacus.Tests.AbacusWriterTests.RecordableRecordersAreRegistered]
+      name: RecordableRecordersAreRegistered
+      fullName: Abacus.Tests.AbacusWriterTests.RecordableRecordersAreRegistered
+      resultStatus: 1
+      duration: 0.4766705
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.AbacusWriterTests][suite]
     - id: 1003
-      uniqueId: Assembly-CSharp-Editor.dll/Tests/NewTestScript/[Assembly-CSharp-Editor][Tests.NewTestScript.NewTestScriptWithEnumeratorPasses]
-      name: NewTestScriptWithEnumeratorPasses
-      fullName: Tests.NewTestScript.NewTestScriptWithEnumeratorPasses
-      resultStatus: 0
-      duration: 0
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/AbacusWriterTests/[Assembly-CSharp-Editor][Abacus.Tests.AbacusWriterTests.TemporalRecordersAreRegistered]
+      name: TemporalRecordersAreRegistered
+      fullName: Abacus.Tests.AbacusWriterTests.TemporalRecordersAreRegistered
+      resultStatus: 1
+      duration: 0.0586467
       messages: 
       output: 
       stacktrace: 
@@ -485,14 +535,518 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: Assembly-CSharp-Editor.dll/Tests/[Assembly-CSharp-Editor][Tests.NewTestScript][suite]
-    m_ResultText: Abacus (0.000s)
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.AbacusWriterTests][suite]
+    - id: 1005
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.FieldMetricTests][suite]
+      name: FieldMetricTests
+      fullName: Abacus.Tests.FieldMetricTests
+      resultStatus: 1
+      duration: 0.1787565
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1033
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/[Abacus.Tests][suite]
+    - id: 1006
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/FieldMetricTests/[Assembly-CSharp-Editor][Abacus.Tests.FieldMetricTests.RetrievesCorrectValue]
+      name: RetrievesCorrectValue
+      fullName: Abacus.Tests.FieldMetricTests.RetrievesCorrectValue
+      resultStatus: 1
+      duration: 0.0572217
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1005
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.FieldMetricTests][suite]
+    - id: 1006
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/FieldMetricTests/[Assembly-CSharp-Editor][Abacus.Tests.FieldMetricTests.RetrievesFieldOnStart]
+      name: RetrievesFieldOnStart
+      fullName: Abacus.Tests.FieldMetricTests.RetrievesFieldOnStart
+      resultStatus: 1
+      duration: 0.0557391
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1005
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.FieldMetricTests][suite]
+    - id: 1008
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.PropertyMetricTests][suite]
+      name: PropertyMetricTests
+      fullName: Abacus.Tests.PropertyMetricTests
+      resultStatus: 1
+      duration: 0.1329161
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1037
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/[Abacus.Tests][suite]
+    - id: 1010
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/PropertyMetricTests/[Assembly-CSharp-Editor][Abacus.Tests.PropertyMetricTests.RetrievesCorrectValue]
+      name: RetrievesCorrectValue
+      fullName: Abacus.Tests.PropertyMetricTests.RetrievesCorrectValue
+      resultStatus: 1
+      duration: 0.0647066
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.PropertyMetricTests][suite]
+    - id: 1009
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/PropertyMetricTests/[Assembly-CSharp-Editor][Abacus.Tests.PropertyMetricTests.RetrievesPropertyOnStart]
+      name: RetrievesPropertyOnStart
+      fullName: Abacus.Tests.PropertyMetricTests.RetrievesPropertyOnStart
+      resultStatus: 1
+      duration: 0.0549434
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.PropertyMetricTests][suite]
+    - id: 1007
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.SplitwatchTests][suite]
+      name: SplitwatchTests
+      fullName: Abacus.Tests.SplitwatchTests
+      resultStatus: 1
+      duration: 0.3589151
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1033
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/[Abacus.Tests][suite]
+    - id: 1012
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/SplitwatchTests/[Assembly-CSharp-Editor][Abacus.Tests.SplitwatchTests.SplitwatchDumpIsEquivalentToStoredValues]
+      name: SplitwatchDumpIsEquivalentToStoredValues
+      fullName: Abacus.Tests.SplitwatchTests.SplitwatchDumpIsEquivalentToStoredValues
+      resultStatus: 1
+      duration: 0.0616636
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.SplitwatchTests][suite]
+    - id: 1009
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/SplitwatchTests/[Assembly-CSharp-Editor][Abacus.Tests.SplitwatchTests.SplitwatchFirstToggleStartsWatch]
+      name: SplitwatchFirstToggleStartsWatch
+      fullName: Abacus.Tests.SplitwatchTests.SplitwatchFirstToggleStartsWatch
+      resultStatus: 1
+      duration: 0.0559366
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.SplitwatchTests][suite]
+    - id: 1011
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/SplitwatchTests/[Assembly-CSharp-Editor][Abacus.Tests.SplitwatchTests.SplitwatchMeasureIsWritten]
+      name: SplitwatchMeasureIsWritten
+      fullName: Abacus.Tests.SplitwatchTests.SplitwatchMeasureIsWritten
+      resultStatus: 1
+      duration: 0.0559087
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.SplitwatchTests][suite]
+    - id: 1013
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/SplitwatchTests/[Assembly-CSharp-Editor][Abacus.Tests.SplitwatchTests.SplitwatchRegistersSelfToWriter]
+      name: SplitwatchRegistersSelfToWriter
+      fullName: Abacus.Tests.SplitwatchTests.SplitwatchRegistersSelfToWriter
+      resultStatus: 1
+      duration: 0.0564506
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.SplitwatchTests][suite]
+    - id: 1008
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/SplitwatchTests/[Assembly-CSharp-Editor][Abacus.Tests.SplitwatchTests.SplitwatchReturnsCorrectLabel]
+      name: SplitwatchReturnsCorrectLabel
+      fullName: Abacus.Tests.SplitwatchTests.SplitwatchReturnsCorrectLabel
+      resultStatus: 1
+      duration: 0.056199
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.SplitwatchTests][suite]
+    - id: 1010
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/SplitwatchTests/[Assembly-CSharp-Editor][Abacus.Tests.SplitwatchTests.SplitwatchSecondToggleStopsWatch]
+      name: SplitwatchSecondToggleStopsWatch
+      fullName: Abacus.Tests.SplitwatchTests.SplitwatchSecondToggleStopsWatch
+      resultStatus: 1
+      duration: 0.0553767
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.SplitwatchTests][suite]
+    - id: 1014
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.StopwatchTests][suite]
+      name: StopwatchTests
+      fullName: Abacus.Tests.StopwatchTests
+      resultStatus: 1
+      duration: 0.4403521
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1033
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/[Abacus.Tests][suite]
+    - id: 1020
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/StopwatchTests/[Assembly-CSharp-Editor][Abacus.Tests.StopwatchTests.StopwatchDumpIsEquivalentToStoredValues]
+      name: StopwatchDumpIsEquivalentToStoredValues
+      fullName: Abacus.Tests.StopwatchTests.StopwatchDumpIsEquivalentToStoredValues
+      resultStatus: 1
+      duration: 0.0577275
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1014
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.StopwatchTests][suite]
+    - id: 1016
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/StopwatchTests/[Assembly-CSharp-Editor][Abacus.Tests.StopwatchTests.StopwatchFirstToggleStartsWatch]
+      name: StopwatchFirstToggleStartsWatch
+      fullName: Abacus.Tests.StopwatchTests.StopwatchFirstToggleStartsWatch
+      resultStatus: 1
+      duration: 0.0592042
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1014
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.StopwatchTests][suite]
+    - id: 1018
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/StopwatchTests/[Assembly-CSharp-Editor][Abacus.Tests.StopwatchTests.StopwatchMeasureIsWritten]
+      name: StopwatchMeasureIsWritten
+      fullName: Abacus.Tests.StopwatchTests.StopwatchMeasureIsWritten
+      resultStatus: 1
+      duration: 0.0666534
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1014
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.StopwatchTests][suite]
+    - id: 1020
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/StopwatchTests/[Assembly-CSharp-Editor][Abacus.Tests.StopwatchTests.StopwatchRegistersSelfToWriter]
+      name: StopwatchRegistersSelfToWriter
+      fullName: Abacus.Tests.StopwatchTests.StopwatchRegistersSelfToWriter
+      resultStatus: 1
+      duration: 0.0577188
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.StopwatchTests][suite]
+    - id: 1015
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/StopwatchTests/[Assembly-CSharp-Editor][Abacus.Tests.StopwatchTests.StopwatchReturnsCorrectLabel]
+      name: StopwatchReturnsCorrectLabel
+      fullName: Abacus.Tests.StopwatchTests.StopwatchReturnsCorrectLabel
+      resultStatus: 1
+      duration: 0.0541658
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1014
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.StopwatchTests][suite]
+    - id: 1017
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/StopwatchTests/[Assembly-CSharp-Editor][Abacus.Tests.StopwatchTests.StopwatchSecondToggleStopsWatch]
+      name: StopwatchSecondToggleStopsWatch
+      fullName: Abacus.Tests.StopwatchTests.StopwatchSecondToggleStopsWatch
+      resultStatus: 1
+      duration: 0.0581331
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1014
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.StopwatchTests][suite]
+    - id: 1019
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/StopwatchTests/[Assembly-CSharp-Editor][Abacus.Tests.StopwatchTests.StopwatchTimeDurationIsAccurate]
+      name: StopwatchTimeDurationIsAccurate
+      fullName: Abacus.Tests.StopwatchTests.StopwatchTimeDurationIsAccurate
+      resultStatus: 1
+      duration: 0.0596252
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1014
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.StopwatchTests][suite]
+    - id: 1022
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.TimeDurationTests][suite]
+      name: TimeDurationTests
+      fullName: Abacus.Tests.TimeDurationTests
+      resultStatus: 1
+      duration: 0.0158413
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1033
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/[Abacus.Tests][suite]
+    - id: 1025
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/TimeDurationTests/[Assembly-CSharp-Editor][Abacus.Tests.TimeDurationTests.TimeDurationDurationIsAccurate]
+      name: TimeDurationDurationIsAccurate
+      fullName: Abacus.Tests.TimeDurationTests.TimeDurationDurationIsAccurate
+      resultStatus: 1
+      duration: 0.0007647
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1022
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.TimeDurationTests][suite]
+    - id: 1024
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/TimeDurationTests/[Assembly-CSharp-Editor][Abacus.Tests.TimeDurationTests.TimeDurationEndTimeIsAccurate]
+      name: TimeDurationEndTimeIsAccurate
+      fullName: Abacus.Tests.TimeDurationTests.TimeDurationEndTimeIsAccurate
+      resultStatus: 1
+      duration: 0.0004938
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1022
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.TimeDurationTests][suite]
+    - id: 1023
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/TimeDurationTests/[Assembly-CSharp-Editor][Abacus.Tests.TimeDurationTests.TimeDurationStartTimeIsAccurate]
+      name: TimeDurationStartTimeIsAccurate
+      fullName: Abacus.Tests.TimeDurationTests.TimeDurationStartTimeIsAccurate
+      resultStatus: 1
+      duration: 0.0004309
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1022
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.TimeDurationTests][suite]
+    - id: 1026
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.TimestampTests][suite]
+      name: TimestampTests
+      fullName: Abacus.Tests.TimestampTests
+      resultStatus: 1
+      duration: 0.2503225
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1033
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/[Abacus.Tests][suite]
+    - id: 1029
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/TimestampTests/[Assembly-CSharp-Editor][Abacus.Tests.TimestampTests.StopwatchDumpIsEquivalentToStoredValues]
+      name: StopwatchDumpIsEquivalentToStoredValues
+      fullName: Abacus.Tests.TimestampTests.StopwatchDumpIsEquivalentToStoredValues
+      resultStatus: 1
+      duration: 0.0694377
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.TimestampTests][suite]
+    - id: 1027
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/TimestampTests/[Assembly-CSharp-Editor][Abacus.Tests.TimestampTests.StopwatchReturnsCorrectLabel]
+      name: StopwatchReturnsCorrectLabel
+      fullName: Abacus.Tests.TimestampTests.StopwatchReturnsCorrectLabel
+      resultStatus: 1
+      duration: 0.0551005
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.TimestampTests][suite]
+    - id: 1028
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/TimestampTests/[Assembly-CSharp-Editor][Abacus.Tests.TimestampTests.TimestampRegistersSelfToWriter]
+      name: TimestampRegistersSelfToWriter
+      fullName: Abacus.Tests.TimestampTests.TimestampRegistersSelfToWriter
+      resultStatus: 1
+      duration: 0.0550682
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.TimestampTests][suite]
+    - id: 1028
+      uniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/TimestampTests/[Assembly-CSharp-Editor][Abacus.Tests.TimestampTests.TimestampStampIsWritten]
+      name: TimestampStampIsWritten
+      fullName: Abacus.Tests.TimestampTests.TimestampStampIsWritten
+      resultStatus: 1
+      duration: 0.0565012
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: Assembly-CSharp-Editor.dll/Abacus/Tests/[Assembly-CSharp-Editor][Abacus.Tests.TimestampTests][suite]
+    m_ResultText: Abacus (2.259s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 059cc0fe
       m_LastClickedID: -20931579
-      m_ExpandedIDs: 813f26cf5ac4dfd92b5163e7059cc0feffffff7f
+      m_ExpandedIDs: 8d7dce9513be099cc62e429c63987c9f813f26cf037d36d05ac4dfd9784658de2b5163e7ffed42f27e9111fb059cc0fe96a76519ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -639,20 +1193,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Testing/Tests/Editor
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Testing/Tests/Editor
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Users\Nathan\Abacus\Abacus
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0c350000
-    m_LastClickedID: 13580
-    m_ExpandedIDs: 00000000242e0000962f0000003000003e3200006e3400007a34000086340000003500000635000000ca9a3b
+    m_SelectedIDs: 222e0000
+    m_LastClickedID: 11810
+    m_ExpandedIDs: 00000000222e00000c32000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -680,7 +1234,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000242e0000
+    m_ExpandedIDs: 00000000222e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -760,7 +1314,7 @@ MonoBehaviour:
     x: 1485
     y: 73
     width: 433
-    height: 570
+    height: 612
   m_ViewDataDictionary: {fileID: 0}
   m_OpenAddComponentMenu: 0
   m_ObjectsLockedBeforeSerialization: []
@@ -803,9 +1357,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0c350000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 4efbffff
+      m_ExpandedIDs: 72fbffff68330000f6330000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -865,9 +1419,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 216.5, y: 121, z: 0}
+    m_Target: {x: 208.07353, y: 154.68059, z: 0}
     speed: 2
-    m_Value: {x: 216.5, y: 121, z: 0}
+    m_Value: {x: 208.07353, y: 154.68059, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -900,9 +1454,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 530.31525
+    m_Target: 407.18658
     speed: 2
-    m_Value: 530.31525
+    m_Value: 389.65222
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -950,9 +1504,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1485
-    y: 662
+    y: 704
     width: 433
-    height: 339
+    height: 297
   m_ViewDataDictionary: {fileID: 0}
   m_VSyncEnabled: 0
   m_MaximizeOnPlay: 0
@@ -967,8 +1521,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -216.5
     m_HBaseRangeMax: 216.5
-    m_VBaseRangeMin: -161
-    m_VBaseRangeMax: 161
+    m_VBaseRangeMin: -140
+    m_VBaseRangeMax: 140
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -987,9 +1541,9 @@ MonoBehaviour:
       x: 0
       y: 17
       width: 433
-      height: 322
+      height: 280
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 216.5, y: 161}
+    m_Translation: {x: 216.5, y: 140}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -997,14 +1551,14 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -216.5
-      y: -161
+      y: -140
       width: 433
-      height: 322
+      height: 280
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 433, y: 339}
+  m_LastWindowPixelSize: {x: 433, y: 297}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000

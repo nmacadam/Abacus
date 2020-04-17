@@ -1,25 +1,39 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Abacus.Internal;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using UnityEditor.SceneManagement;
 using UnityEngine;
-using UnityEngine.TestTools;
 
 namespace Abacus.Tests
 {
-    public abstract class PropertyMetricTests<T> where T : IRecordable
+    public class PropertyMetricTests
     {
-        //[SetUp]
-        //public void ResetScene()
-        //{
-        //    EditorSceneManager.NewScene(NewSceneSetup.EmptyScene);
-        //}
+        private FloatPropertyMetric _recordFrom;
+        private FloatPropertyMetric _propertyMetric;
 
-        //[Test]
-        //public void PropertyMetricTestsSimplePasses()
-        //{
-        //    // Use the Assert class to test conditions
-        //}
+        [SetUp]
+        public void Setup()
+        {
+            EditorSceneManager.NewScene(NewSceneSetup.EmptyScene);
+            var go = new GameObject();
+            _recordFrom = go.AddComponent<FloatPropertyMetric>();
+            _propertyMetric = go.AddComponent<FloatPropertyMetric>();
+        }
+
+        [Test]
+        public void RetrievesPropertyOnStart()
+        {
+            _propertyMetric.AttachVariable(_recordFrom, "TimeStep");
+            TestUtilities.InvokeInstanceMethod<PropertyMetric<float>>(_propertyMetric, "Start");
+            Assert.IsTrue(_propertyMetric.RetrievedMember);
+        }
+
+        [Test]
+        public void RetrievesCorrectValue()
+        {
+            _recordFrom.SetTimeStep(5f);
+
+            _propertyMetric.AttachVariable(_recordFrom, "TimeStep");
+            TestUtilities.InvokeInstanceMethod<PropertyMetric<float>>(_propertyMetric, "Start");
+            Assert.IsTrue(_propertyMetric.GetValue() == 5f);
+        }
     }
 }

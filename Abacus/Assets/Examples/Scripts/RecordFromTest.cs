@@ -11,7 +11,7 @@ namespace Abacus.Examples
 
         public Vector3 PublicNonProperty;
 
-        [SerializeField] private Vector3 _inner;
+        [SerializeField] private Vector3 _inner = default;
 
         public Vector3 TestValue
         {

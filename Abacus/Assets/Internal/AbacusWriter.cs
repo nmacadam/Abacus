@@ -11,6 +11,8 @@ namespace Abacus.Internal
     /// </summary>
     public class AbacusWriter : MonoBehaviour
     {
+        private static AbacusSettings _settings;
+
         // There's multiple layers of 'shut down' here, because the writer needs to write out the json before being destroyed
 
         // Check to see if we're about to be destroyed.
@@ -64,12 +66,21 @@ namespace Abacus.Internal
                             // Need to create a new GameObject to attach the singleton to.
                             var singletonObject = new GameObject();
                             _instance = singletonObject.AddComponent<AbacusWriter>();
-                            singletonObject.name = typeof(AbacusWriter).ToString() + " (Singleton)";
+                            singletonObject.name = "Abacus Writer";
 
                             // Make instance persistent.
-                            if (!Application.isEditor)
+                            if (Application.isPlaying)
                             {
                                 DontDestroyOnLoad(singletonObject);
+                            }
+
+                            if (_settings == null)
+                            {
+                                _settings = AbacusSettings.Instance;
+                            }
+                            else if (_settings == null && AbacusSettings.Instance == null)
+                            {
+                                Debug.Log("Couldn't retrieve settings");
                             }
                         }
                     }
@@ -134,7 +145,7 @@ namespace Abacus.Internal
             );
             outputContent.Records = outputRecords.ToArray();
 
-            Debug.Log(JsonConvert.SerializeObject(outputContent, AbacusSettings.Instance.FormatOutput ? Formatting.Indented : Formatting.None));
+            //Debug.Log(JsonConvert.SerializeObject(outputContent, AbacusSettings.Instance.FormatOutput ? Formatting.Indented : Formatting.None));
 
             using (var sw = new StreamWriter("./data.json"))
             {

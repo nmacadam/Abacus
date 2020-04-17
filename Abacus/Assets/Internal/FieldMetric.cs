@@ -11,7 +11,9 @@ namespace Abacus
     /// <typeparam name="T">The data type for the field metric to hold</typeparam>
     public abstract class FieldMetric<T> : Metric<T>
     { 
-        private FieldInfo fieldInfo;
+        private FieldInfo _fieldInfo;
+
+        public override bool RetrievedMember => _fieldInfo != null;
 
         protected virtual bool AreEqual(T a, T b)
         {
@@ -31,7 +33,7 @@ namespace Abacus
         /// <returns>The current value from the property</returns>
         public override T GetValue()
         {
-            return (T)fieldInfo.GetValue(recordFrom);
+            return (T)_fieldInfo.GetValue(recordFrom);
         }
 
         private void Start()
@@ -40,8 +42,8 @@ namespace Abacus
 
             componentType = recordFrom.GetType().UnderlyingSystemType;
 
-            fieldInfo = componentType.GetField(recordName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
-            if (fieldInfo == null)
+            _fieldInfo = componentType.GetField(recordName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+            if (_fieldInfo == null)
             {
                 Debug.LogError($"Field info (type: {typeof(T)}, name:{recordName}) was not found on component {componentType}");
             }

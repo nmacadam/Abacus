@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Abacus.Internal;
+using NUnit.Framework;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
@@ -61,6 +62,7 @@ namespace Abacus.Tests
         [Test]
         public void SplitwatchRegistersSelfToWriter()
         {
+            TestUtilities.InvokeInstanceMethod(_splitwatch, "Start");
             Assert.Contains(_splitwatch, AbacusWriter.Instance.RegisteredTemporals);
         }
     }

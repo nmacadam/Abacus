@@ -12,10 +12,23 @@ namespace Abacus.Internal
     {
         [SerializeField] protected bool _recordOnStart = true;
         [SerializeField] protected float _timeStep = 1f;
+
+        /// <summary>
+        /// The time step duration of the metric recorder
+        /// </summary>
         public float TimeStep => _timeStep;
 
         protected bool _isEnabled = false;
+
+        /// <summary>
+        /// Whether the metric recorder is enabled
+        /// </summary>
         public bool IsEnabled => _isEnabled;
+
+        /// <summary>
+        /// Whether the metric recorder has retrieved the field/property it will record the value of
+        /// </summary>
+        public abstract bool RetrievedMember { get; }
 
         // The fields are serialized to be managed by the custom inspector
         [SerializeField] protected GameObject recordGameObject;
@@ -26,6 +39,9 @@ namespace Abacus.Internal
 
         protected Type componentType;
 
+        /// <summary>
+        /// The history of recorded values for this metric
+        /// </summary>
         public List<DataPoint<T>> History { get; } = new List<DataPoint<T>>();
 
         protected float startTime;
@@ -33,6 +49,18 @@ namespace Abacus.Internal
         protected T _lastRecordedValue;
 
         protected T _previousValue;
+
+        /// <summary>
+        /// Attach a variable to the metric to be recorded
+        /// </summary>
+        /// <param name="component">The component the variable is a member of</param>
+        /// <param name="variableName">The variable name as a string</param>
+        public void AttachVariable(Component component, string variableName)
+        {
+            recordGameObject = component.gameObject;
+            recordFrom = component;
+            recordName = variableName;
+        }
 
         /// <summary>
         /// Returns the metric's data as an object to be serialized
@@ -88,6 +116,15 @@ namespace Abacus.Internal
         public void SetSource(Component component)
         {
             recordFrom = component;
+        }
+
+        /// <summary>
+        /// Sets the time step for the recorder
+        /// </summary>
+        /// <param name="timeStep">The new time step duration (s)</param>
+        public void SetTimeStep(float timeStep)
+        {
+            _timeStep = timeStep;
         }
 
         /// <summary>

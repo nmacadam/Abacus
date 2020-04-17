@@ -13,7 +13,7 @@ namespace Abacus
     public abstract class PropertyMetric<T> : Metric<T>
     {
         private Delegate _read;
-
+        public override bool RetrievedMember => _read != null;
         protected virtual bool AreEqual(T a, T b)
         {
             if (typeof(IEquatable<>).IsAssignableFrom(typeof(T)))
