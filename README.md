@@ -2,13 +2,10 @@
   <img src="https://raw.githubusercontent.com/nmacadam/Abacus/master/Abacus/Assets/Examples/abacus.png?token=AJA7SOMOZKBOEUGFL5O5OCC6UDJ5S" width="50%" height="50%">
 </p>
 <p align="center">
-  playtesting tools for unity
+  playtesting tools for unity (<a href="https://www.notion.so/Abacus-Playtesting-Metrics-1fd8efa230824700bf989c6ab67cbdf5" alt="docs" target="_blank">docs</a>)
 </p>
 <p align="center">
   <a href="https://opensource.org/licenses/MIT" alt="license"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a>
-</p>
-<p align="center">
-  <a href="https://www.notion.so/Abacus-Playtesting-Metrics-1fd8efa230824700bf989c6ab67cbdf5" alt="docs" target="_blank">documentation</a>
 </p>
 
 ## Features
@@ -24,11 +21,12 @@ Abacus provides several means to record temporal data about gameplay.  These com
 - Splitwatch (seperate, sequential events for an event timeline)
 
 ## Roadmap
-- Intermediate value dumping (for minimizing necessary memory)
+- Customization settings for intermediate value dumping
+- Scene-Agnostic recorders
 - Cumulative metrics for multiple sessions
 - Screenshot support
 - Raw data output types (.csv, etc.)
 
 ### Dependencies
 - Json.NET for Unity
-- NSubstitute
+- NSubstitute (only for tests)
