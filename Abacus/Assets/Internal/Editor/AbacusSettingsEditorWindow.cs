@@ -46,6 +46,13 @@ class AbacusSettingsEditorWindow : EditorWindow
         //_fileOutputType = _serializedSettings.FindProperty("DefaultTimeStep");
         _formatOutputFile = _serializedSettings.FindProperty("FormatOutput");
         _path = _serializedSettings.FindProperty("WritePath");
+
+        if (_path.stringValue == string.Empty)
+        {
+            _serializedSettings.Update();
+            _path.stringValue = Application.persistentDataPath;
+            _serializedSettings.ApplyModifiedProperties();
+        }
     }
 
     private void OnGUI()
@@ -85,7 +92,9 @@ class AbacusSettingsEditorWindow : EditorWindow
         _path.stringValue = EditorGUILayout.TextField(new GUIContent("Save Path", "Where should the output file be saved?"), _path.stringValue);
         if (GUILayout.Button("..", GUILayout.Width(20), GUILayout.Height(15)))
         {
-            _path.stringValue = EditorUtility.OpenFolderPanel("Abacus Output Path", _path.stringValue, "");
+            var fromDialog = EditorUtility.OpenFolderPanel("Abacus Output Path", _path.stringValue, "");
+            if (fromDialog != string.Empty)
+                _path.stringValue = fromDialog;
         }
 
         EditorGUILayout.EndHorizontal();

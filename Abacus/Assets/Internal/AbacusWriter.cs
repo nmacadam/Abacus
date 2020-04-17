@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Newtonsoft.Json;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Abacus.Internal
 {
@@ -93,6 +95,12 @@ namespace Abacus.Internal
         private void Awake()
         {
             _start = DateTime.Now;
+            SceneManager.activeSceneChanged += OnBeforeSceneChange;
+        }
+
+        private void OnBeforeSceneChange(Scene current, Scene next)
+        {
+            StoreIntermediateData();
         }
 
         private void OnApplicationQuit()
@@ -104,12 +112,107 @@ namespace Abacus.Internal
             _shuttingDown = true;
         }
 
+        private List<OutputData> _intermediateRecords = new List<OutputData>();
+
+        /// <summary>
+        /// Stores a temporary OutputData object for export at the end of the application or on a Dump call
+        /// </summary>
+        public void StoreIntermediateData()
+        {
+            foreach (var record in recordables)
+            {
+                OutputData data;
+                data.DisplayType = "set";
+                data.VariableName = record.GetVariableName();
+                data.VariableType = record.GetValueType().ToString();
+                data.Data = record.Dump();
+                _intermediateRecords.Add(data);
+            }
+
+            foreach (var record in temporals)
+            {
+                OutputData data;
+                data.DisplayType = record.DisplayType;
+                data.VariableName = record.GetVariableName();
+                data.VariableType = typeof(float).ToString();
+                data.Data = record.Dump();
+                _intermediateRecords.Add(data);
+            }
+
+            recordables.Clear();
+            temporals.Clear();
+        }
+
+        /*
+        private List<string> _intermediateData = new List<string>();
+
+        public void DumpIntermediateAsTempFile()
+        {
+            List<OutputData> outputRecords = new List<OutputData>();
+            foreach (var record in recordables)
+            {
+                OutputData data;
+                data.DisplayType = "set";
+                data.VariableName = record.GetVariableName();
+                data.VariableType = record.GetValueType().ToString();
+                data.Data = record.Dump();
+                outputRecords.Add(data);
+            }
+
+            foreach (var record in temporals)
+            {
+                OutputData data;
+                data.DisplayType = record.DisplayType;
+                data.VariableName = record.GetVariableName();
+                data.VariableType = typeof(float).ToString();
+                data.Data = record.Dump();
+                outputRecords.Add(data);
+            }
+
+            var intermediateContent = outputRecords.ToArray();
+
+            var path = $"{AbacusSettings.Instance.WritePath}/abacusTemp_{_intermediateData.Count}.json";
+            _intermediateData.Add(path);
+            using (var sw = new StreamWriter(path))
+            {
+                sw.Write(JsonConvert.SerializeObject(intermediateContent, AbacusSettings.Instance.FormatOutput ? Formatting.Indented : Formatting.None));
+            }
+
+            recordables.Clear();
+            temporals.Clear();
+        }
+
+        private string RetrieveIntermediateTempFileData()
+        {
+            string intermediateJSON = string.Empty;
+
+            for (var i = 0; i < _intermediateData.Count; i++)
+            {
+                string text = System.IO.File.ReadAllText(_intermediateData[i]);
+                text = text.TrimStart('[');
+                text = text.TrimEnd(']');
+
+                if (i > _intermediateData.Count - 1)
+                {
+                    text += ",";
+                }
+
+                intermediateJSON += text;
+            }
+
+            _intermediateData.Clear();
+
+            return intermediateJSON;
+        }
+        */
+
         /// <summary>
         /// Converts all registered recorder's histories to a json output
         /// </summary>
         public void Dump()
         {
-            List<OutputData> outputRecords = new List<OutputData>();
+            List<OutputData> outputRecords = _intermediateRecords.Count > 0 ? _intermediateRecords : new List<OutputData>();
+
             foreach (var record in recordables)
             {
                 OutputData data;
@@ -147,10 +250,14 @@ namespace Abacus.Internal
 
             //Debug.Log(JsonConvert.SerializeObject(outputContent, AbacusSettings.Instance.FormatOutput ? Formatting.Indented : Formatting.None));
 
-            using (var sw = new StreamWriter("./data.json"))
+            var path = $"{AbacusSettings.Instance.WritePath}/abacus_data_{DateTime.Now:MM-dd-yyyy_hh-mm-ss-tt}.json";
+            using (var sw = new StreamWriter(path))
             {
                 sw.Write(JsonConvert.SerializeObject(outputContent, AbacusSettings.Instance.FormatOutput ? Formatting.Indented : Formatting.None));
             }
+
+            recordables.Clear();
+            temporals.Clear();
         }
 
         /// <summary>
