@@ -6,6 +6,8 @@
 </p>
 <p align="center">
   <a href="https://opensource.org/licenses/MIT" alt="license"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a>
+  <a href="https://GitHub.com/nmacadam/Abacus/tags/" alt="license"><img src="https://img.shields.io/github/tag/nmacadam/Abacus.svg" /></a>
+</p>
 
 Abacus is a toolkit for defining and recording game metrics during playtesting sessions.  It exports a JSON file after a playtesting session containing all of the recorded data, which can be visualized with Abacus Board.  Abacus can be integrated into a Unity project with little to no coupling and removed just as easily for production builds.
 
