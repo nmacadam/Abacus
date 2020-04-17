@@ -6,16 +6,15 @@
 </p>
 <p align="center">
   <a href="https://opensource.org/licenses/MIT" alt="license"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a>
-</p>
 
 Abacus is a toolkit for defining and recording game metrics during playtesting sessions.  It exports a JSON file after a playtesting session containing all of the recorded data, which can be visualized with Abacus Board.  Abacus can be integrated into a Unity project with little to no coupling and removed just as easily for production builds.
 
 ## Getting Started
-Download the [latest release](https://github.com/nmacadam/Abacus/releases) and head over to the [documentation](https://www.notion.so/Abacus-Playtesting-Metrics-1fd8efa230824700bf989c6ab67cbdf5) for an introduction to the Abacus toolset.
+Download the [latest release](https://github.com/nmacadam/Abacus/releases) and head over to the [documentation](https://www.notion.so/Abacus-Playtesting-Metrics-1fd8efa230824700bf989c6ab67cbdf5) for an introduction to the Abacus toolset—or dive right into the [scripting documentation](https://nmacadam.github.io/Abacus/html/index.html).
 
 ## Feature Overview
 
-### 🧾 Generic Value Recording
+### 📜 Generic Value Recording
 Abacus can periodically record generic type values throughout gameplay.  This is accomplished completely nonintrusively with a Metric component.  No calls like 'Abacus.RecordValue(myValue)' required--it's handled automatically!  The default time step for recording values can be globally adjusted, or a custom time step can be assigned to each Metric.  Creating a new Metric recorder is simple, either inherit from FieldMetric<> to read from fields, or PropertyMetric<> to read from properties.
 
 ### ⏱ Temporal Recording
@@ -34,6 +33,8 @@ Abacus Board is an accessory app that visualizes data and generates statistics f
 - Screenshot support
 - Raw data output types (.csv, etc.)
 
-### Dependencies
+[*detailed roadmap here*](https://www.notion.so/ff0823a50d6b49cea904d81d1b6621d0?v=17ea35e0c09f416ba2cf926ed09fa65d)
+
+### 📦 Dependencies
 - Json.NET for Unity
 - NSubstitute (only for tests)
