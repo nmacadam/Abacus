@@ -24,6 +24,9 @@ Abacus provides several means to record temporal data about gameplay.  These com
 - Stopwatch (single event, multiple durations for comparison)
 - Splitwatch (seperate, sequential events for an event timeline)
 
+### 📋 Abacus Board Data Visualization App
+Abacus Board is an accessory app that visualizes data and generates statistics from the Abacus plugin output file.  Check out its [repository](https://github.com/nmacadam/abacus-board) or [see it in action](https://nmacadam.github.io/abacus-board/).
+
 ## Roadmap
 - Customization settings for intermediate value dumping
 - Scene-Agnostic recorders
